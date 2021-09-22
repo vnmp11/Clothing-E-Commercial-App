@@ -1,0 +1,135 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\d46382b657a613e2e59353bf5b31311c\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\6104b4331e4a2a639aa6c46906b047e1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\eb141c5ef7338b7d88a561c27d2e3f74\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\5e81bbc10d715803a9b03a2a6a4e8f18\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\2d501a97755eebc778813f20230277c3\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9ab7dccad67c46ef3c5d55379ba247d2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cc4abad2e0f9e8691df8348f330bb387\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9fce4128d370fee574a2c26db3b8323c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\a95a79e3911502d813f58b98c62ddfb4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\ccf39e675193ccca4ecb983e454204d8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\00524b0ca001bb4c9cd9c08c377df0c3\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\35f4b9a1faf0cd4a934b5518110442a3\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:2:5-35
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:1-47:12
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:8:5-46:19
+MERGED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\00524b0ca001bb4c9cd9c08c377df0c3\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\00524b0ca001bb4c9cd9c08c377df0c3\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:10:9-33
+	android:icon
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:11:9-43
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:9:9-57
+activity#com.example.shop_app.MainActivity
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:12:9-40:20
+	android:launchMode
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:14:13-43
+	android:hardwareAccelerated
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:17:13-47
+	android:windowSoftInputMode
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:18:13-55
+	android:configChanges
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:16:13-163
+	android:theme
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:15:13-47
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:13:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:23:13-26:17
+	android:resource
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:25:15-52
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:24:15-70
+meta-data#io.flutter.embedding.android.SplashScreenDrawable
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:32:13-35:17
+	android:resource
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:34:15-61
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:33:15-79
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:37:17-68
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:38:27-74
+meta-data#flutterEmbedding
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:43:9-45:33
+	android:value
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:45:13-30
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml:44:13-44
+uses-sdk
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\d46382b657a613e2e59353bf5b31311c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\d46382b657a613e2e59353bf5b31311c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\6104b4331e4a2a639aa6c46906b047e1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\6104b4331e4a2a639aa6c46906b047e1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\eb141c5ef7338b7d88a561c27d2e3f74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\eb141c5ef7338b7d88a561c27d2e3f74\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\5e81bbc10d715803a9b03a2a6a4e8f18\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\5e81bbc10d715803a9b03a2a6a4e8f18\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\2d501a97755eebc778813f20230277c3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\2d501a97755eebc778813f20230277c3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cbda0d80911ec3256f076c233fea133c\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9ab7dccad67c46ef3c5d55379ba247d2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9ab7dccad67c46ef3c5d55379ba247d2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cc4abad2e0f9e8691df8348f330bb387\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\cc4abad2e0f9e8691df8348f330bb387\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9fce4128d370fee574a2c26db3b8323c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\9fce4128d370fee574a2c26db3b8323c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\a95a79e3911502d813f58b98c62ddfb4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\a95a79e3911502d813f58b98c62ddfb4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\ccf39e675193ccca4ecb983e454204d8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\ccf39e675193ccca4ecb983e454204d8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\00524b0ca001bb4c9cd9c08c377df0c3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\00524b0ca001bb4c9cd9c08c377df0c3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\35f4b9a1faf0cd4a934b5518110442a3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\phuon\.gradle\caches\transforms-2\files-2.1\35f4b9a1faf0cd4a934b5518110442a3\AndroidManifest.xml:20:5-44
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from D:\JUNIOR_1st Term\E-commerce-Complete-Flutter-UI\android\app\src\debug\AndroidManifest.xml:6:22-64
