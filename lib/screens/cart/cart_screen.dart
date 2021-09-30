@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/constants.dart';
 import 'package:shop_app/models/Cart.dart';
 
 import 'components/body.dart';
@@ -17,16 +18,21 @@ class CartScreen extends StatelessWidget {
 
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
+      iconTheme: new IconThemeData(
+          color: kPrimaryColor),
       title: Column(
         children: [
+
           Text(
             "Your Cart",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Color.fromARGB(255, 79, 119, 45),),
           ),
           Text(
             "${demoCarts.length} items",
             style: Theme.of(context).textTheme.caption,
+            textAlign: TextAlign.left,
           ),
+
         ],
       ),
     );

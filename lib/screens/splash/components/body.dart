@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 import 'package:shop_app/size_config.dart';
 
@@ -16,17 +18,17 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Tokoto, Let’s shop!",
-      "image": "assets/images/splash_1.png"
+      "text": "Welcome to NewLook, Let’s shop!",
+      "image": "assets/images/splash1.png"
     },
     {
       "text":
-          "We help people conect with store \naround United State of America",
-      "image": "assets/images/splash_2.png"
+          "Choose your best fashion now \nFind what you want",
+      "image": "assets/images/splash2.png"
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
+      "image": "assets/images/splash3.png"
     },
   ];
   @override
@@ -36,8 +38,9 @@ class _BodyState extends State<Body> {
         width: double.infinity,
         child: Column(
           children: <Widget>[
+            Spacer(flex: 1),
             Expanded(
-              flex: 3,
+              flex: 4,
               child: PageView.builder(
                 onPageChanged: (value) {
                   setState(() {
@@ -51,6 +54,7 @@ class _BodyState extends State<Body> {
                 ),
               ),
             ),
+
             Expanded(
               flex: 2,
               child: Padding(
@@ -58,7 +62,7 @@ class _BodyState extends State<Body> {
                     horizontal: getProportionateScreenWidth(20)),
                 child: Column(
                   children: <Widget>[
-                    Spacer(),
+                    Spacer(flex: 1),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: List.generate(
@@ -66,11 +70,31 @@ class _BodyState extends State<Body> {
                         (index) => buildDot(index: index),
                       ),
                     ),
-                    Spacer(flex: 3),
+                    Spacer(flex: 2),
                     DefaultButton(
-                      text: "Continue",
-                      press: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
+                      text: "CONTINUE",
+                      press: ()  async {
+                        storeSplashScreenInfo();
+                        SharedPreferences prefs = await SharedPreferences.getInstance();
+                        var status = prefs.getBool('isLoggedIn') ?? false;
+                        print(status);
+                        if (status) {
+                          Navigator.pushReplacement<void, void>(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) => HomeScreen(),
+                            ),
+                          );
+                        } else {
+                          Navigator.pushReplacement<void, void>(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) => SignInScreen(),
+                            ),
+                          );
+                        }
+
+
                       },
                     ),
                     Spacer(),
@@ -95,5 +119,11 @@ class _BodyState extends State<Body> {
         borderRadius: BorderRadius.circular(3),
       ),
     );
+  }
+
+  storeSplashScreenInfo() async{
+    int isViewed = 0;
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    await pref.setInt('splashScreen', isViewed);
   }
 }

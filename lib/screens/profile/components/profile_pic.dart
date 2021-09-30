@@ -1,10 +1,62 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'dart:io';
 
-class ProfilePic extends StatelessWidget {
-  const ProfilePic({
-    Key? key,
-  }) : super(key: key);
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:shop_app/components/dialog.dart';
+
+class ProfilePic extends StatefulWidget {
+  const ProfilePic({ Key? key}) : super(key: key);
+
+  @override
+  _ProfilePicState createState() => _ProfilePicState();
+}
+
+class _ProfilePicState extends State<ProfilePic> {
+
+  User? user = FirebaseAuth.instance.currentUser;
+  ImagePicker imagePicker = ImagePicker();
+  late String _downloadUrl = " ";
+  File? imageFile = null;
+  late PickedFile pickedFile;
+
+  Future getImage() async {
+    final pickedFile  = await ImagePicker().getImage(
+      source: ImageSource.gallery,
+      maxWidth: 1800,
+      maxHeight: 1800,
+    );
+    if (pickedFile != null) {
+      setState(() {
+        imageFile = File(pickedFile.path);
+        uploadPic(imageFile!);
+      });
+    }
+  }
+  uploadPic(File image) async {
+    var snapshot = await FirebaseStorage.instance.ref()
+        .child('ImageProfile/${user!.uid}')
+        .putFile(image);
+
+    setState(()  {
+      MyDialog().showLoaderDialog(context);
+      Future.delayed(Duration(seconds: 3));
+      Navigator.pop(context);
+      MyDialog().showCompleteDialog(context, "Updated your image.");
+    });
+
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    Reference _reference = FirebaseStorage.instance.ref().child("ImageProfile/${user!.uid}");
+    _reference.getDownloadURL().then((loc) => setState(() => _downloadUrl = loc));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +67,13 @@ class ProfilePic extends StatelessWidget {
         fit: StackFit.expand,
         clipBehavior: Clip.none,
         children: [
-          CircleAvatar(
-            backgroundImage: AssetImage("assets/images/Profile Image.png"),
+          ClipOval(
+            child: (_downloadUrl != null && imageFile==null)?Image.network(_downloadUrl, fit: BoxFit.cover) : Image.file(
+              imageFile!,
+              fit: BoxFit.cover,
+              height: 150.0,
+              width: 100.0,
+            ),
           ),
           Positioned(
             right: -16,
@@ -33,7 +90,10 @@ class ProfilePic extends StatelessWidget {
                   primary: Colors.white,
                   backgroundColor: Color(0xFFF5F6F9),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  getImage();
+
+                },
                 child: SvgPicture.asset("assets/icons/Camera Icon.svg"),
               ),
             ),

@@ -15,20 +15,24 @@ class SplashContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Spacer(),
+
         Text(
-          "TOKOTO",
+          "NEWLOOK",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
             color: kPrimaryColor,
             fontWeight: FontWeight.bold,
           ),
         ),
+
         Text(
           text!,
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(16)
+          ),
           textAlign: TextAlign.center,
         ),
-        Spacer(flex: 2),
+        Spacer(flex: 1),
         Image.asset(
           image!,
           height: getProportionateScreenHeight(265),

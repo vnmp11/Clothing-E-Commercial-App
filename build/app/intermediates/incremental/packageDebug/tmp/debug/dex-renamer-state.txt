@@ -1,4 +1,0 @@
-#Tue Sep 21 20:10:52 ICT 2021
-base.0=D\:\\JUNIOR_1st Term\\E-commerce-Complete-Flutter-UI\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
-renamed.0=classes.dex
-path.0=classes.dex

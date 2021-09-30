@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
                 Text(
                   "Welcome Back",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Color.fromARGB(255, 79, 119, 45),
                     fontSize: getProportionateScreenWidth(28),
                     fontWeight: FontWeight.bold,
                   ),
@@ -43,10 +43,7 @@ class Body extends StatelessWidget {
                       icon: "assets/icons/facebook-2.svg",
                       press: () {},
                     ),
-                    SocalCard(
-                      icon: "assets/icons/twitter.svg",
-                      press: () {},
-                    ),
+
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),

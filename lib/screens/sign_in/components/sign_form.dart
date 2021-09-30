@@ -1,9 +1,13 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shop_app/components/custom_surfix_icon.dart';
 import 'package:shop_app/components/form_error.dart';
-import 'package:shop_app/helper/keyboard.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
+import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 
 import '../../../components/default_button.dart';
 import '../../../constants.dart';
@@ -20,6 +24,11 @@ class _SignFormState extends State<SignForm> {
   String? password;
   bool? remember = false;
   final List<String?> errors = [];
+  TextEditingController emailcontroller = new TextEditingController();
+  TextEditingController passlcontroller = new TextEditingController();
+
+  //firebase
+  final _auth = FirebaseAuth.instance;
 
   void addError({String? error}) {
     if (!errors.contains(error))
@@ -42,9 +51,9 @@ class _SignFormState extends State<SignForm> {
       child: Column(
         children: [
           buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
+          SizedBox(height: getProportionateScreenHeight(20)),
           buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(30)),
+          SizedBox(height: getProportionateScreenHeight(20)),
           Row(
             children: [
               Checkbox(
@@ -71,14 +80,10 @@ class _SignFormState extends State<SignForm> {
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
           DefaultButton(
-            text: "Continue",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
+            text: "LOGIN",
+
+            press: (){
+              signIn(emailcontroller.text, passlcontroller.text);
             },
           ),
         ],
@@ -88,6 +93,7 @@ class _SignFormState extends State<SignForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
+      controller: passlcontroller,
       obscureText: true,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
@@ -121,6 +127,7 @@ class _SignFormState extends State<SignForm> {
 
   TextFormField buildEmailFormField() {
     return TextFormField(
+      controller: emailcontroller,
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue,
       onChanged: (value) {
@@ -144,11 +151,37 @@ class _SignFormState extends State<SignForm> {
       decoration: InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
+
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
     );
+  }
+  User? user;
+  void signIn(String email, String password) async{
+    if (_formKey.currentState!.validate())
+    {
+      SharedPreferences prefs;
+      await _auth.signInWithEmailAndPassword(email: email, password: password)
+          .then((uid)  async => {
+           prefs = await SharedPreferences.getInstance(),
+          prefs.setBool("isLoggedIn", true),
+        user = _auth.currentUser,
+        if (user!.emailVerified)
+          {
+            Fluttertoast.showToast(msg: "Login Successfully"),
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                    builder: (context) => HomeScreen()))
+          }
+        else
+          {
+            Fluttertoast.showToast(msg: "Your email isn't verified. "),
+          }
+      }).catchError((e)
+      {
+        Fluttertoast.showToast(msg: e!.message);
+      });
+    }
   }
 }

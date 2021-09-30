@@ -1,9 +1,19 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shop_app/components/dialog.dart';
+import 'package:shop_app/screens/edit_profile/edit_profile.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 
+import '../../../constants.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
 
 class Body extends StatelessWidget {
+  late SharedPreferences prefs;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -15,7 +25,7 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "My Account",
             icon: "assets/icons/User Icon.svg",
-            press: () => {},
+            press: () => Navigator.pushNamed(context, EditProfile.routeName),
           ),
           ProfileMenu(
             text: "Notifications",
@@ -28,17 +38,15 @@ class Body extends StatelessWidget {
             press: () {},
           ),
           ProfileMenu(
-            text: "Help Center",
-            icon: "assets/icons/Question mark.svg",
-            press: () {},
-          ),
-          ProfileMenu(
             text: "Log Out",
             icon: "assets/icons/Log out.svg",
-            press: () {},
+            press: () async {
+              MyDialog().showLogoutDialog(context);
+            },
           ),
         ],
       ),
     );
   }
+
 }
