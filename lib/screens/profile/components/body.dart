@@ -5,6 +5,7 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shop_app/components/dialog.dart';
 import 'package:shop_app/screens/edit_profile/edit_profile.dart';
+import 'package:shop_app/screens/order/order.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
 
 import '../../../constants.dart';
@@ -28,15 +29,11 @@ class Body extends StatelessWidget {
             press: () => Navigator.pushNamed(context, EditProfile.routeName),
           ),
           ProfileMenu(
-            text: "Notifications",
+            text: "My Orders",
             icon: "assets/icons/Bell.svg",
-            press: () {},
+            press: () => Navigator.pushNamed(context, MyOrder.routeName),
           ),
-          ProfileMenu(
-            text: "Settings",
-            icon: "assets/icons/Settings.svg",
-            press: () {},
-          ),
+
           ProfileMenu(
             text: "Log Out",
             icon: "assets/icons/Log out.svg",

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/components/product_card.dart';
+import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/products/products.dart';
 
 import '../../../size_config.dart';
 import 'section_title.dart';
@@ -17,7 +20,9 @@ class SpecialOffers extends StatelessWidget {
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SectionTitle(
             title: "Special for you",
-            press: () {},
+            press: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(title: 'Special for you', product: demoProducts,)));
+            },
           ),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),

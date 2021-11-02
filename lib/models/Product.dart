@@ -69,11 +69,25 @@ List<Product> demoProducts = [
       "assets/images/wireless headset.png",
     ],
 
-    title: "Logitech Head",
+    title: "Logitech Head 34563 24",
     price: 20.20,
     description: description,
     rating: 4.1,
     isFavourite: true,
+    isPopular: true,
+  ),
+  Product(
+    id: 5,
+    images: [
+      "assets/images/glap.png",
+    ],
+
+    title: "Product 5 fdfs- Polygon",
+    price: 36.55,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+    isPopular: true,
   ),
 ];
 

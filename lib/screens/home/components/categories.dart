@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/products/products.dart';
 
 import '../../../size_config.dart';
 
@@ -23,7 +25,9 @@ class Categories extends StatelessWidget {
           (index) => CategoryCard(
             icon: categories[index]["icon"],
             text: categories[index]["text"],
-            press: () {},
+            press: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(title: "${categories[index]["text"]}", product: demoProducts,)));
+            },
           ),
         ),
       ),
@@ -55,7 +59,7 @@ class CategoryCard extends StatelessWidget {
               height: getProportionateScreenWidth(55),
               width: getProportionateScreenWidth(55),
               decoration: BoxDecoration(
-                color: Color(0xFFDDE5B6).withOpacity(0.4),
+                color: Color(0xFFDDE5B6).withOpacity(0.5),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: SvgPicture.asset(icon!),

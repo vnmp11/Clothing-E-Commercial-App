@@ -23,10 +23,11 @@ class SearchField extends StatelessWidget {
                 horizontal: getProportionateScreenWidth(20),
                 vertical: getProportionateScreenWidth(9)),
             border: InputBorder.none,
+            focusColor:Color(0xFF4f772d) ,
             focusedBorder: InputBorder.none,
             enabledBorder: InputBorder.none,
             hintText: "Search product",
-            prefixIcon: Icon(Icons.search)),
+            prefixIcon: Icon(Icons.search, color: Color(0xFF4f772d),)),
       ),
     );
   }

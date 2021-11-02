@@ -9,14 +9,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="add function SignUp/SignIn/EditProfile">
+      <change afterPath="$PROJECT_DIR$/lib/components/order_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/Order.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/favorite/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/favorite/favorite.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/order/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/order/order.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/products/body.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/products/products.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/Bill Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Bill Icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/Cart Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Cart Icon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons/Log out.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Log out.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/coustom_bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/coustom_bottom_nav_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/product_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Product.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/discount_banner.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/discount_banner.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/search_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/search_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\phuon\.android\avd\Nexus_6_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@3300ea371e8383cf]" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -70,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632969914159</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add function SignUp/SignIn/EditProfile">
+      <created>1632980842130</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632980842130</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,42 +143,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="add function SignUp/SignIn/EditProfile" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="419" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1632828901203">
+    <state x="459" y="189" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635824209415">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state x="419" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1376.774@0.0.1376.774" timestamp="1632828901203" />
-    <state x="469" y="142" key="FileChooserDialogImpl" timestamp="1632275213444">
+    <state x="459" y="189" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1376.774@0.0.1376.774" timestamp="1635824209415" />
+    <state x="419" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1635824283084">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state x="469" y="142" key="FileChooserDialogImpl/0.0.1376.774@0.0.1376.774" timestamp="1632275213444" />
-    <state width="646" height="193" key="GridCell.Tab.0.bottom" timestamp="1632923974350">
+    <state x="419" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1376.774@0.0.1376.774" timestamp="1635824283084" />
+    <state x="469" y="142" key="FileChooserDialogImpl" timestamp="1634816169619">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state width="646" height="193" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1632923974350" />
-    <state width="646" height="193" key="GridCell.Tab.0.center" timestamp="1632923974350">
+    <state x="469" y="142" key="FileChooserDialogImpl/0.0.1376.774@0.0.1376.774" timestamp="1634816169619" />
+    <state width="1331" height="195" key="GridCell.Tab.0.bottom" timestamp="1635832375657">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state width="646" height="193" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1632923974350" />
-    <state width="646" height="193" key="GridCell.Tab.0.left" timestamp="1632923974350">
+    <state width="1331" height="195" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
+    <state width="1331" height="195" key="GridCell.Tab.0.center" timestamp="1635832375657">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state width="646" height="193" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1632923974350" />
-    <state width="646" height="193" key="GridCell.Tab.0.right" timestamp="1632923974350">
+    <state width="1331" height="195" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
+    <state width="1331" height="195" key="GridCell.Tab.0.left" timestamp="1635832375657">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state width="646" height="193" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1632923974350" />
+    <state width="1331" height="195" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
+    <state width="1331" height="195" key="GridCell.Tab.0.right" timestamp="1635832375657">
+      <screen x="0" y="0" width="1376" height="774" />
+    </state>
+    <state width="1331" height="195" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
     <state x="197" y="0" key="SettingsEditor" timestamp="1632542241011">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="197" y="0" key="SettingsEditor/0.0.1376.774@0.0.1376.774" timestamp="1632542241011" />
-    <state x="281" y="120" key="Vcs.Push.Dialog.v2" timestamp="1632969922201">
+    <state x="281" y="120" key="Vcs.Push.Dialog.v2" timestamp="1632980844057">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state x="281" y="120" key="Vcs.Push.Dialog.v2/0.0.1376.774@0.0.1376.774" timestamp="1632969922201" />
+    <state x="281" y="120" key="Vcs.Push.Dialog.v2/0.0.1376.774@0.0.1376.774" timestamp="1632980844057" />
+    <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632980452004">
+      <screen x="0" y="0" width="1376" height="774" />
+    </state>
+    <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1376.774@0.0.1376.774" timestamp="1632980452004" />
     <state x="344" y="174" key="run.anything.popup" timestamp="1632802248562">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="344" y="174" key="run.anything.popup/0.0.1376.774@0.0.1376.774" timestamp="1632802248562" />
+    <state x="351" y="95" width="672" height="678" key="search.everywhere.popup" timestamp="1635566611449">
+      <screen x="0" y="0" width="1376" height="774" />
+    </state>
+    <state x="351" y="95" width="672" height="678" key="search.everywhere.popup/0.0.1376.774@0.0.1376.774" timestamp="1635566611449" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
