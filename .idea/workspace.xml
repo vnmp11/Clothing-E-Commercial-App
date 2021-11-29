@@ -9,30 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="basic_backend">
-      <change afterPath="$PROJECT_DIR$/lib/helper/ProductHelper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/provider/product_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/helper/CartHelper.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/product_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Cart.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Product.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/cart_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/cart_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/cart_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/cart_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details/components/product_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details/components/product_images.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/favorite/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/favorite/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/products/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/products/body.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632980842130</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="basic_backend">
+      <created>1638157654434</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638157654434</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,18 +111,22 @@
                   <entry key="Show.Git.Branches" value="false" />
                 </map>
               </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -162,6 +151,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1638116922338" />
+    <state x="149" y="82" key="DiffContextDialog" timestamp="1638158375746">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="149" y="82" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1638158375746" />
     <state x="436" y="125" key="FileChooserDialogImpl" timestamp="1636737572241">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -195,9 +188,10 @@
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="197" y="0" key="SettingsEditor/0.0.1376.774@0.0.1376.774" timestamp="1632542241011" />
-    <state x="281" y="120" key="Vcs.Push.Dialog.v2" timestamp="1632980844057">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2" timestamp="1638158464188">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1638158464188" />
     <state x="281" y="120" key="Vcs.Push.Dialog.v2/0.0.1376.774@0.0.1376.774" timestamp="1632980844057" />
     <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632980452004">
       <screen x="0" y="0" width="1376" height="774" />
