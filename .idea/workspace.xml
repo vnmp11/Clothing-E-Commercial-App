@@ -8,37 +8,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="add function SignUp/SignIn/EditProfile">
-      <change afterPath="$PROJECT_DIR$/lib/components/order_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/Order.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/favorite/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/favorite/favorite.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/order/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/order/order.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/products/body.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/products/products.dart" afterDir="false" />
+    <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="basic_backend">
+      <change afterPath="$PROJECT_DIR$/lib/helper/ProductHelper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/provider/product_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/Bill Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Bill Icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/Cart Icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Cart Icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/Log out.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/Log out.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/coustom_bottom_nav_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/coustom_bottom_nav_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/components/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/product_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/Cart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Cart.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/Product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Product.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart/cart_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/cart_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/cart_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/cart_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/details/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/details/components/product_images.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details/components/product_images.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/favorite/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/favorite/body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/discount_banner.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/discount_banner.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/popular_product.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/components/search_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/search_field.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/components/special_offer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/products/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/products/body.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[SerialNumber@3300ea371e8383cf]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\ASUS\.android\avd\Pixel_XL_API_30.avd]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -61,7 +62,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/provider" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -75,6 +76,11 @@
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\android\app\src\main\res\drawable" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\assets\icons" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\android\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\Desktop\Clothing-E-Commercial-App\lib\provider" />
+      <recent name="C:\Users\ASUS\Desktop\Clothing-E-Commercial-App\lib\helper" />
+      <recent name="C:\Users\ASUS\Desktop\Clothing-E-Commercial-App\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -140,7 +146,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add function SignUp/SignIn/EditProfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="add function SignUp/SignIn/EditProfile" />
+    <MESSAGE value="basic_backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic_backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="189" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1635824209415">
@@ -151,26 +158,39 @@
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="419" y="134" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1376.774@0.0.1376.774" timestamp="1635824283084" />
-    <state x="469" y="142" key="FileChooserDialogImpl" timestamp="1634816169619">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state x="93" y="93" width="1095" height="495" key="AVDManager" timestamp="1638116922338">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="93" y="93" width="1095" height="495" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1638116922338" />
+    <state x="436" y="125" key="FileChooserDialogImpl" timestamp="1636737572241">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="436" y="125" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1636737572241" />
     <state x="469" y="142" key="FileChooserDialogImpl/0.0.1376.774@0.0.1376.774" timestamp="1634816169619" />
-    <state width="1331" height="195" key="GridCell.Tab.0.bottom" timestamp="1635832375657">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom" timestamp="1638118607956">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
     <state width="1331" height="195" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
-    <state width="1331" height="195" key="GridCell.Tab.0.center" timestamp="1635832375657">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state width="1237" height="137" key="GridCell.Tab.0.center" timestamp="1638118607955">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1638118607955" />
     <state width="1331" height="195" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
-    <state width="1331" height="195" key="GridCell.Tab.0.left" timestamp="1635832375657">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state width="1237" height="137" key="GridCell.Tab.0.left" timestamp="1638118607954">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1638118607954" />
     <state width="1331" height="195" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
-    <state width="1331" height="195" key="GridCell.Tab.0.right" timestamp="1635832375657">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state width="1237" height="137" key="GridCell.Tab.0.right" timestamp="1638118607956">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
     <state width="1331" height="195" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1635832375657" />
+    <state width="254" height="198" key="RunAnythingAction_Filter_Popup" timestamp="1636724311730">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="254" height="198" key="RunAnythingAction_Filter_Popup/0.0.1280.680@0.0.1280.680" timestamp="1636724311730" />
     <state x="197" y="0" key="SettingsEditor" timestamp="1632542241011">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
@@ -183,13 +203,19 @@
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1376.774@0.0.1376.774" timestamp="1632980452004" />
-    <state x="344" y="174" key="run.anything.popup" timestamp="1632802248562">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state x="302" y="24" key="new project wizard" timestamp="1637989801528">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="302" y="24" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1637989801528" />
+    <state x="320" y="158" key="run.anything.popup" timestamp="1637385055484">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="320" y="158" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1637385055484" />
     <state x="344" y="174" key="run.anything.popup/0.0.1376.774@0.0.1376.774" timestamp="1632802248562" />
-    <state x="351" y="95" width="672" height="678" key="search.everywhere.popup" timestamp="1635566611449">
-      <screen x="0" y="0" width="1376" height="774" />
+    <state x="327" y="83" width="672" height="596" key="search.everywhere.popup" timestamp="1637759827040">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="327" y="83" width="672" height="596" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1637759827040" />
     <state x="351" y="95" width="672" height="678" key="search.everywhere.popup/0.0.1376.774@0.0.1376.774" timestamp="1635566611449" />
   </component>
   <component name="XDebuggerManager">

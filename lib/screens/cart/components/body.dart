@@ -1,7 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shop_app/models/Cart.dart';
-
+import 'package:shop_app/provider/cart_provider.dart';
+import 'package:provider/provider.dart';
 import '../../../size_config.dart';
 import 'cart_card.dart';
 
@@ -12,20 +15,46 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   @override
+
   Widget build(BuildContext context) {
+    var cartProvider = Provider.of<CartProvider>(context);
+
+    print (cartProvider.carts.length);
+
+    List<Cart> cartUser=[];
+    User? user = FirebaseAuth.instance.currentUser;
+
+
+    for (int i=0;i<cartProvider.carts.length;i++){
+      if((cartProvider.carts[i].uID==user!.uid)&&(cartProvider.carts[i].status==false)){
+        cartUser.add(cartProvider.carts[i]);
+      }
+    }
+    print (cartUser.length);
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
       child: ListView.builder(
-        itemCount: demoCarts.length,
+        itemCount: cartUser.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Dismissible(
-            key: Key(demoCarts[index].product.id.toString()),
+            key: UniqueKey(),
             direction: DismissDirection.endToStart,
             onDismissed: (direction) {
-              setState(() {
-                demoCarts.removeAt(index);
+              setState(()  {
+                //FirebaseFirestore firestore = ;
+                print(cartUser[index].cartID);
+                FirebaseFirestore.instance.collection('Cart').doc(cartUser[index].cartID).delete();
+
+
+                cartProvider.carts.removeAt(index);
+                cartUser.removeAt(index);
+
+
+
+
+
               });
             },
             background: Container(
@@ -41,10 +70,12 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            child: CartCard(cart: demoCarts[index]),
+            child: CartCard(cart: cartUser[index] ),
           ),
         ),
       ),
     );
+
   }
+
 }

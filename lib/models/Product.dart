@@ -1,95 +1,80 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Product {
-  final int id;
-  final String title, description;
-  final List<String> images;
-  final double rating, price;
-  final bool isFavourite, isPopular;
 
-  Product({
-    required this.id,
-    required this.images,
-    this.rating = 0.0,
-    this.isFavourite = false,
-    this.isPopular = false,
-    required this.title,
-    required this.price,
-    required this.description,
-  });
+  String id ="" ;
+  String title = "";
+  int kind = 0;
+  String description = "";
+  List<String> images = [];
+  double rating = 0;
+  double price = 0;
+  bool isFavourite = false;
+  bool isPopular = false;
+  //
+  //
+  //
+  // Product.fromMap(Map<String, dynamic> data){
+  //   description = data['description'];
+  //   id = data['id'];
+  //   title = data ['title'];
+  //   images = data['image'];
+  //   rating = data['rating'];
+  //   price = data['price'];
+  //   isFavourite = data['isFa'];
+  //   isPopular = data['isPo'];
+
+  static const ID = "id";
+  static const TITLE = "title";
+  static const KIND = "kind";
+  static const DESCRIPTION = "description";
+  static const IMAGE = "image";
+  static const RATING = "rating";
+  static const PRICE = "price";
+  static const ISPO = "isPo";
+  static const ISFA = "isFa";
+
+
+  // String id ;
+  // String title;
+  // int kind;
+  // String  description;
+  // List<String> images;
+  // double rating ;
+  // double price ;
+  // bool isFavourite;
+  // bool isPopular;
+
+  //getter
+  // String get _id => id;
+  // String get _title => title;
+  // int get _kind => kind;
+  // String get _description => description;
+  // List<String> get _images => images;
+  // double get _rating => rating;
+  // double get _price => price;
+  // bool get _isFavourite => isFavourite;
+  // bool get _isPopular => isPopular;
+
+
+
+  Product.fromSnapshot(DocumentSnapshot snapshot){
+
+    id = snapshot.get(ID);
+    title = snapshot.get(TITLE);
+    kind = snapshot.get(KIND);
+    description = snapshot.get(DESCRIPTION);
+    for(int i=0; i< 3; i++){
+      images.add(snapshot.get(IMAGE)[i]) ;
+    }
+
+    rating = double.parse(snapshot.get(RATING).toString());
+    price = double.parse(snapshot.get(PRICE).toString());
+    isFavourite = snapshot.get(ISFA);
+    isPopular = snapshot.get(ISPO);
+
+  }
+
 }
-
-// Our demo Products
-
-List<Product> demoProducts = [
-  Product(
-    id: 1,
-    images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
-    ],
-
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
-    description: description,
-    rating: 4.8,
-    isFavourite: true,
-    isPopular: true,
-  ),
-  Product(
-    id: 2,
-    images: [
-      "assets/images/Image Popular Product 2.png",
-    ],
-
-    title: "Nike Sport White - Man Pant",
-    price: 50.5,
-    description: description,
-    rating: 4.1,
-    isPopular: true,
-  ),
-  Product(
-    id: 3,
-    images: [
-      "assets/images/glap.png",
-    ],
-
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-    isPopular: true,
-  ),
-  Product(
-    id: 4,
-    images: [
-      "assets/images/wireless headset.png",
-    ],
-
-    title: "Logitech Head 34563 24",
-    price: 20.20,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-    isPopular: true,
-  ),
-  Product(
-    id: 5,
-    images: [
-      "assets/images/glap.png",
-    ],
-
-    title: "Product 5 fdfs- Polygon",
-    price: 36.55,
-    description: description,
-    rating: 4.1,
-    isFavourite: true,
-    isPopular: true,
-  ),
-];
-
-const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";

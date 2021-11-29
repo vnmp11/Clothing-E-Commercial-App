@@ -11,9 +11,10 @@ import 'package:shop_app/screens/products/products.dart';
 
 import '../../../size_config.dart';
 import '../../constants.dart';
-
+import 'package:shop_app/provider/product_provider.dart';
 
 class Body extends StatelessWidget {
+
   final List<Product> product;
   Body( this.product);
   @override
@@ -28,7 +29,7 @@ class Body extends StatelessWidget {
                 childAspectRatio: 0.7,
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 10),
-            itemCount: demoProducts.length,
+            itemCount: product.length,
             itemBuilder: (BuildContext ctx, index) {
               return ProductCard(product: product[index]);
             }),

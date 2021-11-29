@@ -21,7 +21,7 @@ class SpecialOffers extends StatelessWidget {
           child: SectionTitle(
             title: "Special for you",
             press: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(title: 'Special for you', product: demoProducts,)));
+              //Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(title: 'Special for you', product: demoProducts,)));
             },
           ),
         ),
