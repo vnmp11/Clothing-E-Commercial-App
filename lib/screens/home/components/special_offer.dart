@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:shop_app/components/product_card.dart';
 import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/screens/products/products.dart';
@@ -17,33 +18,83 @@ class SpecialOffers extends StatelessWidget {
       children: [
         Padding(
           padding:
-          EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: SectionTitle(
-            title: "Special for you",
-            press: () {
-              //Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProductScreen(title: 'Special for you', product: demoProducts,)));
-            },
-          ),
-        ),
-        SizedBox(height: getProportionateScreenWidth(20)),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
+          EdgeInsets.only(left: getProportionateScreenWidth(20), right: getProportionateScreenWidth(20),bottom: getProportionateScreenWidth(0)),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
-                category: "Smartphone",
-                numOfBrands: 18,
-                press: () {},
+            Text(
+            "Special for you",
+            style: TextStyle(
+              fontSize: getProportionateScreenWidth(18),
+              color: Color.fromARGB(255, 79, 119, 45),
+            ),
+          ),]
+        ),
+        ),
+        SizedBox(height: getProportionateScreenWidth(10)),
+        CarouselSlider(
+          items: [
+
+            //1st Image of Slider
+            Container(
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: NetworkImage("https://thedigital.agency/wp-content/uploads/2019/04/3-1.jpg"),
+                  fit: BoxFit.cover,
+                ),
               ),
-              SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
-                numOfBrands: 24,
-                press: () {},
+            ),
+
+            //2nd Image of Slider
+            Container(
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: NetworkImage("https://image.wconcept.co.kr/images/img/contents/20200608_wstyle/pc_01.jpg"),
+                  fit: BoxFit.cover,
+                ),
               ),
-              SizedBox(width: getProportionateScreenWidth(20)),
-            ],
+            ),
+
+            //3rd Image of Slider
+            Container(
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: NetworkImage("https://thedigital.agency/wp-content/uploads/2019/04/1-2.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+            //4th Image of Slider
+            Container(
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.0),
+                image: DecorationImage(
+                  image: NetworkImage("https://thedigital.agency/wp-content/uploads/2019/04/b5.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+
+          ],
+
+          //Slider Container properties
+          options: CarouselOptions(
+            height: 180.0,
+            enlargeCenterPage: true,
+            autoPlay: true,
+            aspectRatio: 16 / 9,
+            autoPlayCurve: Curves.fastOutSlowIn,
+            enableInfiniteScroll: true,
+            autoPlayAnimationDuration: Duration(milliseconds: 500),
+            viewportFraction: 0.9,
           ),
         ),
       ],

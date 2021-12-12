@@ -10,8 +10,6 @@ class CartHelper {
         List <Cart> carts= [];
         for(DocumentSnapshot cart in result.docs){
           carts.add(Cart.fromSnapshot(cart));
-          print(carts[0].proID);
-          print ("work helper");
   }
         return carts;
   });

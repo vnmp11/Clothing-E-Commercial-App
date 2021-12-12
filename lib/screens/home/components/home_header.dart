@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/components/dialog.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
+import 'package:shop_app/screens/cart/components/address.dart';
 
 import '../../../size_config.dart';
 import 'icon_btn_with_counter.dart';
@@ -27,7 +28,8 @@ class HomeHeader extends StatelessWidget {
           IconBtnWithCounter(
             svgSrc: "assets/icons/Log out.svg",
             press: () {
-              MyDialog().showLogoutDialog(context);
+              Navigator.pushNamed(context, DeliveryAddress.routeName);
+              //MyDialog().showLogoutDialog(context);
             },
           ),
         ],

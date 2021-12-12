@@ -89,4 +89,24 @@ class MyDialog {
       },
     );
   }
+
+  showNoti(BuildContext context, String content){
+    SharedPreferences prefs;
+    AlertDialog alert = AlertDialog(
+      content: Text(content),
+      actions: <Widget>[
+        FlatButton(
+          child: new Text("Ok", style: TextStyle(color: kPrimaryColor),),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+
+      ],
+    );
+    showDialog(barrierDismissible: false,
+      context:context,
+      builder:(BuildContext context){
+        return alert;
+      },
+    );
+  }
 }

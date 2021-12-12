@@ -33,7 +33,7 @@ class _DiscountBanner extends State<DiscountBanner> {
     return Container(
       // height: 90,
       width: double.infinity,
-      margin: EdgeInsets.all(getProportionateScreenWidth(20)),
+      margin: EdgeInsets.only(right: getProportionateScreenWidth(20), left: getProportionateScreenWidth(20),top: getProportionateScreenWidth(15)),
       padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(20),
         vertical: getProportionateScreenWidth(20),

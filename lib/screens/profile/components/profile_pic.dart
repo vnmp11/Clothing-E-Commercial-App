@@ -20,9 +20,19 @@ class _ProfilePicState extends State<ProfilePic> {
 
   User? user = FirebaseAuth.instance.currentUser;
   ImagePicker imagePicker = ImagePicker();
-  late String _downloadUrl = " ";
+  String? _downloadUrl = "http://hethongxephangtudong.net/public/client/images/no-avatar.png";
   File? imageFile = null;
   late PickedFile pickedFile;
+
+  @override
+  void initState() {
+    super.initState();
+    Reference _reference = FirebaseStorage.instance.ref().child("ImageProfile/${user!.uid}");
+    _reference.getDownloadURL().then((loc) => setState(() => _downloadUrl = loc));
+    if (_downloadUrl == null){
+      _downloadUrl = "http://hethongxephangtudong.net/public/client/images/no-avatar.png";
+    }
+  }
 
   Future getImage() async {
     final pickedFile  = await ImagePicker().getImage(
@@ -51,12 +61,7 @@ class _ProfilePicState extends State<ProfilePic> {
 
   }
 
-  @override
-  void initState() {
-    super.initState();
-    Reference _reference = FirebaseStorage.instance.ref().child("ImageProfile/${user!.uid}");
-    _reference.getDownloadURL().then((loc) => setState(() => _downloadUrl = loc));
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +73,7 @@ class _ProfilePicState extends State<ProfilePic> {
         clipBehavior: Clip.none,
         children: [
           ClipOval(
-            child: (_downloadUrl != null && imageFile==null)?Image.network(_downloadUrl, fit: BoxFit.cover) : Image.file(
+            child: (_downloadUrl!=null && imageFile==null)?Image.network(_downloadUrl!, fit: BoxFit.cover) : Image.file(
               imageFile!,
               fit: BoxFit.cover,
               height: 150.0,

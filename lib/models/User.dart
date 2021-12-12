@@ -5,8 +5,9 @@ class UserModel {
   String? Phone;
   String? Address;
   String? Role;
+  double? Point;
 
-  UserModel({this.uID, this.Email, this.Name, this.Phone, this.Address, this.Role});
+  UserModel({this.uID, this.Email, this.Name, this.Phone, this.Address, this.Role, this.Point});
 
   //get data from server
   factory UserModel.fromMap(map)
@@ -17,7 +18,8 @@ class UserModel {
     Phone: map['Phone'],
     Email: map['Email'],
     Address: map['Address'],
-        Role: map['Role']
+        Role: map['Role'],
+        Point: double.parse(map['Point'].toString())
 
     );
   }
@@ -31,7 +33,8 @@ class UserModel {
       'Phone':Phone,
       'Email':Email,
       'Address':Address,
-      'Role' : Role
+      'Role' : Role,
+      'Point': Point
     };
   }
 

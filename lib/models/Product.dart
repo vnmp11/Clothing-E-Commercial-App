@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import "package:intl/intl.dart";
 
 class Product {
 
@@ -58,7 +59,9 @@ class Product {
   // bool get _isFavourite => isFavourite;
   // bool get _isPopular => isPopular;
 
+  Product(){
 
+  }
 
   Product.fromSnapshot(DocumentSnapshot snapshot){
 

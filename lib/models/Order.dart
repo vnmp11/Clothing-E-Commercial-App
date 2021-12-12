@@ -1,31 +1,35 @@
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:intl/intl.dart';
+
 class Order {
-  final int id;
-  final int item;
-  final double price;
+  String id = " ";
+  String uId = " ";
+  double totalPrice = 0;
+  double subTotal = 0;
+  double feeShip  = 0;
+  int totalItem = 0;
+  String date = " ";
+  int status = 1;
 
+  Order(String id, double price, int items, String date,double subTotal,double ship ){
 
-  Order({
-    required this.id,
-    required this.item,
-    required this.price,
-  });
+  }
+
+  Order.fromSnapshot(DocumentSnapshot snapshot){
+
+    id = snapshot.get("billID");
+    uId = snapshot.get("uID");
+    totalItem = int.parse(snapshot.get("totalItem").toString());
+    totalPrice = double.parse(snapshot.get("totalPrice").toString());
+    subTotal = double.parse(snapshot.get("subTotal").toString());
+    feeShip = double.parse(snapshot.get("feeShip").toString());
+    date = formatTimestamp(snapshot.get("date"));
+    status = snapshot.get("status");
+  }
 }
 
-// Our demo Orders
-
-List<Order> demoOrders = [
-
-  Order(
-    id: 2,
-    price: 50.5,
-    item: 3,
-
-  ),
-  Order(
-    id: 3,
-    price: 36.55,
-    item: 4,
-
-  ),
-
-];
+String formatTimestamp(Timestamp timestamp) {
+  var format = new DateFormat('dd/MM/yyyy hh:mm'); // 'hh:mm' for hour & min
+  return format.format(timestamp.toDate());
+}

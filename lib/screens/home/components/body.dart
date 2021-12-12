@@ -41,24 +41,13 @@ class _BodyState extends State<Body> {
           children:<Widget> [
 
             SizedBox(height: getProportionateScreenHeight(10)),
-            // Padding(
-            //     padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(30)),
-            //     child: Align(
-            //         alignment: Alignment.centerLeft,
-            //         child: Container(
-            //           child: Text(
-            //             "Welcome to NewLOOK, ${loggedInUser.Name}!",
-            //             style: TextStyle(
-            //                 fontSize: 15
-            //             ),
-            //           ),))),
             SizedBox(height: getProportionateScreenHeight(15)),
             HomeHeader(),
             SizedBox(height: getProportionateScreenWidth(5)),
             DiscountBanner(),
             Categories(),
             SpecialOffers(),
-            SizedBox(height: getProportionateScreenWidth(30)),
+            SizedBox(height: getProportionateScreenWidth(20)),
             PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
           ],

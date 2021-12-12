@@ -37,7 +37,7 @@ class RoundedIconBtn extends StatelessWidget {
           primary: kPrimaryColor,
           backgroundColor: Colors.white,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         ),
         onPressed: press,
         child: Icon(icon),

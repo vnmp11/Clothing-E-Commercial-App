@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/search/search.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -17,6 +18,7 @@ class SearchField extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
       ),
       child: TextField(
+        readOnly: true,
         onChanged: (value) => print(value),
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
@@ -28,6 +30,9 @@ class SearchField extends StatelessWidget {
             enabledBorder: InputBorder.none,
             hintText: "Search product",
             prefixIcon: Icon(Icons.search, color: Color(0xFF4f772d),)),
+        onTap: (){
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SearchScreen()));
+        },
       ),
     );
   }

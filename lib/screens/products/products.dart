@@ -27,6 +27,7 @@ AppBar buildAppBar(BuildContext context, String title) {
   return AppBar(
     iconTheme: new IconThemeData(
         color: kPrimaryColor),
+    centerTitle: true,
     title: Column(
       children: [
 

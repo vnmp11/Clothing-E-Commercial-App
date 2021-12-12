@@ -1,37 +1,68 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/components/default_button.dart';
+import 'package:shop_app/components/dialog.dart';
 import 'package:shop_app/models/Cart.dart';
+import 'package:shop_app/models/Order.dart';
+import 'package:shop_app/models/User.dart';
 import 'package:shop_app/provider/cart_provider.dart';
+import 'package:shop_app/provider/order_provider.dart';
+import 'package:shop_app/screens/cart/components/address.dart';
+import 'package:shop_app/screens/cart/components/body.dart';
+import 'package:shop_app/screens/success/success.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
+import "package:intl/intl.dart";
 
-class CheckoutCard extends StatelessWidget {
-  const CheckoutCard({
-    Key? key,
-  }) : super(key: key);
+
+class CheckoutCard extends StatefulWidget {
+  @override
+  _CheckoutCardState createState() => _CheckoutCardState();
+}
+
+class _CheckoutCardState extends State<CheckoutCard> {
+
+  double totalPrice = 0;
+  double shipFee = 30000;
+  double point = 0;
+  User? user = FirebaseAuth.instance.currentUser;
+  UserModel loggedInUser = UserModel();
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     final cartProvider = Provider.of<CartProvider>(context);
+    final orderProvider = Provider.of<OrderProvider>(context);
 
-    double totalPrice = 0;
     int countItems =0;
+
     List<Cart> cartUser=[];
-    User? user = FirebaseAuth.instance.currentUser;
     for (int i=0;i<cartProvider.carts.length;i++){
       if((cartProvider.carts[i].uID==user!.uid)&&(cartProvider.carts[i].status==false)){
         cartUser.add(cartProvider.carts[i]);
         totalPrice = totalPrice + (cartProvider.carts[i].price*cartProvider.carts[i].numOfItem);
-        //print('ok1');
         countItems += cartProvider.carts[i].numOfItem;
       }
     }
-    print(cartUser.length);
+
+    //get the point of user
+    FirebaseFirestore.instance.collection("Users").doc(user!.uid)
+          .get().then((value){
+        this.loggedInUser = UserModel.fromMap(value.data());
+          point = double.parse("${loggedInUser.Point}");
+      });
+
+    // set fee ship
+    if (cartUser.length == 0)
+    {
+      shipFee = 0;
+    }
+
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: getProportionateScreenWidth(15),
@@ -46,9 +77,9 @@ class CheckoutCard extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -15),
-            blurRadius: 20,
-            color: Color(0xFFDADADA).withOpacity(0.15),
+            offset: Offset(0, -25),
+            blurRadius: 10,
+            color: Color(0xFFDADADA).withOpacity(0.18),
           )
         ],
       ),
@@ -57,6 +88,38 @@ class CheckoutCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                    "Sub total: ",
+                  style: TextStyle(fontSize: 14, color: kSecondaryColor, fontWeight:  FontWeight.w500),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    NumberFormat.simpleCurrency(locale: 'vi').format(totalPrice).toString(),
+                    style: TextStyle(fontSize: 14, color: kPrimaryColor, fontWeight:  FontWeight.w600),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Shipping fee: ",
+                  style: TextStyle(fontSize: 14, color: kSecondaryColor, fontWeight:  FontWeight.w500),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    NumberFormat.simpleCurrency(locale: 'vi').format(shipFee).toString(),
+                    style: TextStyle(fontSize: 14, color: kPrimaryColor, fontWeight:  FontWeight.w600),
+                  ),
+                )
+              ],
+            ),
 
             SizedBox(height: getProportionateScreenHeight(20)),
             Row(
@@ -64,11 +127,12 @@ class CheckoutCard extends StatelessWidget {
               children: [
                 Text.rich(
                   TextSpan(
-                    text: "Total:\n",
+                    text: "TOTAL:\n",
+                    style: TextStyle(fontSize: 14, fontWeight:  FontWeight.w600),
                     children: [
                       TextSpan(
-                        text: totalPrice.toString(),
-                        style: TextStyle(fontSize: 16, color: Colors.black),
+                        text: NumberFormat.simpleCurrency(locale: 'vi').format(totalPrice + shipFee).toString(),
+                        style: TextStyle(fontSize: 18, color: kPrimaryColor, fontWeight:  FontWeight.w700),
                       ),
                     ],
                   ),
@@ -78,6 +142,7 @@ class CheckoutCard extends StatelessWidget {
                   child: DefaultButton(
                     text: "Check Out",
                     press: () async {
+
                       List yourItemList = [];
                       for (int i = 0; i < cartUser.length; i++)
                         yourItemList.add({
@@ -88,34 +153,60 @@ class CheckoutCard extends StatelessWidget {
                           "cartID":cartUser[i].cartID,
                         });
 
-                      DocumentReference ref = FirebaseFirestore.instance.collection('Bill').doc();
-                      ref.set({
-                        "uID":cartUser[0].uID ,
-                        "listCart": FieldValue.arrayUnion(yourItemList),
-                        "billID": ref.id,
-                        "totalPrice": totalPrice,
-                        "status": 1,
+                      if (yourItemList.length != 0)
+                        {
 
-                      });
 
-                      // int a =cartProvider.carts.length;
-                      // for(int i = 0; i < a; i++){
-                      //   if(cartProvider.carts[i].uID == user!.uid){
-                      //     cartProvider.carts.remove(cartProvider.carts[i]);
-                      //
-                      //   }
-                      // }
+                          DocumentReference ref = FirebaseFirestore.instance.collection('Order').doc();
 
-                      for(int i = 0; i < cartProvider.carts.length; i++) {
-                        if(cartProvider.carts[i].uID == user!.uid) {
-                          DocumentReference ref1 = FirebaseFirestore.instance.collection('Cart').doc(cartProvider.carts[i].cartID);
-                          ref1.update({
-                            "status": true,
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DeliveryAddress(ref.id),
+                            ),);
+
+                          ref.set({
+                            "uID":cartUser[0].uID ,
+                            "listCart": FieldValue.arrayUnion(yourItemList),
+                            "billID": ref.id,
+                            "subTotal": totalPrice,
+                            "feeShip": shipFee,
+                            "totalPrice": totalPrice + shipFee,
+                            "status": 1,
+                            "date": DateTime.now(),
+                            "totalItem" : yourItemList.length,
+                            "address" : " "
+
                           });
-                          cartProvider.carts[i].status = true;
-                        }
-                      }
+                          
+                          orderProvider.orders.add(new Order(ref.id, totalPrice + shipFee, yourItemList.length, DateFormat('dd/MM/yyyy hh:mm').format(DateTime.now()), totalPrice, shipFee));
+      
+                          // int a =cartProvider.carts.length;
+                          // for(int i = 0; i < a; i++){
+                          //   if(cartProvider.carts[i].uID == user!.uid){
+                          //     cartProvider.carts.remove(cartProvider.carts[i]);
+                          //
+                          //   }
+                          // }
 
+                          for(int i = 0; i < cartProvider.carts.length; i++) {
+                            if(cartProvider.carts[i].uID == user!.uid) {
+                              DocumentReference ref1 = FirebaseFirestore.instance.collection('Cart').doc(cartProvider.carts[i].cartID);
+                              ref1.update({
+                                "status": true,
+                              });
+                              cartProvider.carts[i].status = true;
+                            }
+                          }
+
+                          //Update the point of user
+                          DocumentReference ref1 = FirebaseFirestore.instance.collection('Users').doc(user!.uid);
+                          ref1.update({
+                            "Point": point+totalPrice,
+                          });
+                        }else
+                          {
+                            MyDialog().showNoti(context, "Your cart is empty.");
+                          }
 
                     },
                   ),
@@ -128,3 +219,4 @@ class CheckoutCard extends StatelessWidget {
     );
   }
 }
+

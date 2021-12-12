@@ -17,16 +17,7 @@ class Cart {
   int numOfItem = 0;
   String cartID = "";
   bool status = false;
-
-  // String? image;
-  // String? name ;
-  // double? price;
-  // String? proID ;
-  // String? uID ;
-  // int? numOfItem;
-  // bool? status;
-  //Cart({required.this.uID, this.proID, this.price, this.status, this.image, this.name
-    //, this.numOfItem, this.status});
+  
 Cart(){
 
 }
@@ -56,24 +47,3 @@ Cart(){
     };
   }
 }
-
-// Demo data for our cart
-// class ProductProvider with ChangeNotifier{
-//
-//   ProductHelper _productHelper = ProductHelper();
-//   List<Product> products= [];
-//
-//   ProductProvider.initialize(){
-//     _loadProduct();
-//   }
-//   _loadProduct() async{
-//     products = await _productHelper.getProduct();
-//     notifyListeners();
-//   }
-//
-// }
-//List<Cart> demoCarts = [
-   // Cart(product: demoProducts[0], numOfItem: 2),
-   // Cart(product: demoProducts[1], numOfItem: 1),
-   // Cart(product: demoProducts[3], numOfItem: 1),
-//];

@@ -9,13 +9,17 @@ import 'package:shop_app/screens/profile/profile_screen.dart';
 import '../constants.dart';
 import '../enums.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
+class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({
     Key? key,
     required this.selectedMenu,
   }) : super(key: key);
 
   final MenuState selectedMenu;
+  _CustomBottomNavBarState createState() => _CustomBottomNavBarState();
+
+}
+class _CustomBottomNavBarState extends State<CustomBottomNavBar>{
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +30,7 @@ class CustomBottomNavBar extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            offset: Offset(0, -15),
+            offset: Offset(0, -20),
             blurRadius: 20,
             color: Color(0xFFDADADA).withOpacity(0.15),
           ),
@@ -44,33 +48,38 @@ class CustomBottomNavBar extends StatelessWidget {
               IconButton(
                 icon: SvgPicture.asset(
                   "assets/icons/Shop Icon.svg",
-                  color: MenuState.home == selectedMenu
+                  color: MenuState.home == widget.selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),
                 onPressed: () =>
-                    Navigator.pushReplacement<void, void>(
+                  Navigator.pushReplacement<void, void>(
                       context,
                       MaterialPageRoute<void>(
                         builder: (BuildContext context) =>  HomeScreen(),
                       ),
                     ),
+
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg"),
+                icon: SvgPicture.asset("assets/icons/Heart Icon.svg",color: MenuState.favourite == widget.selectedMenu
+                    ? kPrimaryColor
+                    : inActiveIconColor),
                 onPressed: () =>
-                    Navigator.pushReplacement<void, void>(
-                      context,
-                      MaterialPageRoute<void>(
-                        builder: (BuildContext context) =>  FavoriteScreen(),
-                      ),
+                  Navigator.pushReplacement<void, void>(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) =>  FavoriteScreen(),
                     ),
+                  ),
+
+
               ),
 
               IconButton(
                 icon: SvgPicture.asset(
                   "assets/icons/User Icon.svg",
-                  color: MenuState.profile == selectedMenu
+                  color: MenuState.profile == widget.selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),

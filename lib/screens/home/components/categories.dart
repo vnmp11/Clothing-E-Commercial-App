@@ -34,11 +34,11 @@ class _CategoriesState extends State<Categories>{
       }
     }
     List<Map<String, dynamic>> categories = [
+      {"icon": "assets/icons/tshirt.svg", "text": "T-shirt", "kind" : "4"},
+      {"icon": "assets/icons/dress.svg", "text": "Dress","kind" : "3"},
+      {"icon": "assets/icons/jacket.svg", "text": "Jacket", "kind" : "5"},
       {"icon": "assets/icons/cap.svg", "text": "Cap", "kind" : "1"},
       {"icon": "assets/icons/pants.svg", "text": "Pants","kind" : "2"},
-      {"icon": "assets/icons/dress.svg", "text": "Dress","kind" : "3"},
-      {"icon": "assets/icons/tshirt.svg", "text": "T-shirt", "kind" : "4"},
-      {"icon": "assets/icons/jacket.svg", "text": "Jacket", "kind" : "5"},
     ];
 
     return Padding(
