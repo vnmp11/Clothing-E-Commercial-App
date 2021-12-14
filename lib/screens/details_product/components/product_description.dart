@@ -10,6 +10,7 @@ import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/models/Review.dart';
 import 'package:shop_app/provider/favorite_provider.dart';
 import 'package:shop_app/provider/product_provider.dart';
+import 'package:shop_app/provider/review_provider.dart';
 import 'package:shop_app/screens/home/components/section_title.dart';
 import 'package:shop_app/screens/products/products.dart';
 import 'package:shop_app/screens/review/Reviews.dart';
@@ -61,8 +62,16 @@ class _ProductDescriptionState extends State<ProductDescription>{
 
   @override
   Widget build(BuildContext context) {
+    final reviewProvider = Provider.of<ReviewProvider>(context);
     final productProvider = Provider.of<ProductProvider>(context);
     final favProvider = Provider.of<FavoriteProvider>(context);
+    List<ReviewModel> reviewPro = [];
+
+    for (int i = 0;i < reviewProvider.reviews.length ; i++){
+      if (reviewProvider.reviews[i].idPro == widget.product.id){
+        reviewPro.add(reviewProvider.reviews[i]);
+      }
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -187,22 +196,26 @@ class _ProductDescriptionState extends State<ProductDescription>{
                     fontSize: getProportionateScreenWidth(18),
                     color: Color.fromARGB(255, 79, 119, 45),
                   ),
-                ),]
+                ),
+
+                Text(
+                  reviewPro.length == 0 ? " " : reviewPro.length.toString() + " reviews",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: kSecondaryColor,
+                  ),
+                ),
+              ]
           ),
         ),
-        ListView.separated(
+        reviewPro.length != 0 ? ListView.separated(
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
           padding: EdgeInsets.all(getProportionateScreenWidth(15)),
-          itemCount: 3,
+          itemCount: reviewPro.length,
           itemBuilder: (context, index) {
             return ReviewCard(
-              image: reviewList[index].image,
-              name: reviewList[index].name,
-              date: reviewList[index].date,
-              comment: reviewList[index].comment,
-              rating: reviewList[index].rating,
-              onPressed: () => print("More Action $index"),
+              review: reviewPro[index],
               onTap: () => setState(() {
                 isMore = !isMore;
               }),
@@ -215,15 +228,26 @@ class _ProductDescriptionState extends State<ProductDescription>{
               color: kAccentColor,
             );
           },
+        ) : Padding(
+          padding:
+
+          EdgeInsets.all(getProportionateScreenWidth(15)),
+          child: Align(
+            child: Text(
+                "No reviews yet.",
+                style: TextStyle(color: kSecondaryColor)
+            ),
+            alignment: Alignment.center,),
         ),
 
-        Padding(
+
+        reviewPro.length != 0 ? Padding(
           padding:
 
           EdgeInsets.all(getProportionateScreenWidth(15)),
           child: Align(child: GestureDetector(
             onTap: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Reviews()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Reviews(id: widget.product.id,)));
             },
             child: Text(
                 "See More",
@@ -232,7 +256,7 @@ class _ProductDescriptionState extends State<ProductDescription>{
           ),
           alignment: Alignment.center,),
 
-        ),
+        ) : SizedBox.shrink(),
 
         Divider(
         color: kAccentColor,

@@ -21,8 +21,8 @@ class DetailOrder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: Body(),
-      bottomNavigationBar: BottomCard(),
+      body: Body(id),
+      bottomNavigationBar: BottomCard(id),
     );
 
 

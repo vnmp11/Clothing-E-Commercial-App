@@ -6,11 +6,17 @@ import 'package:intl/intl.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/models/Order.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/screens/detail_order/detail_delivered_order.dart';
+import 'package:shop_app/screens/detail_order/detail_order.dart';
 import 'package:shop_app/screens/details_product/details_screen.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
+
+TextEditingController reviewcontroller = new TextEditingController();
+String? review;
+double? rate = 1;
 
 class DeliveredOrderCard extends StatelessWidget {
   DeliveredOrderCard({
@@ -24,9 +30,16 @@ class DeliveredOrderCard extends StatelessWidget {
   final Order order;
   Color _colorFav = Color(0xFFDBDEE4);
 
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return  GestureDetector(
+        onTap: ()
+    {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => DetailDeliveredOrder(order.id)));
+    },
+    child: SingleChildScrollView(child:Padding(
         padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(5)),
         child: Container(
             margin: EdgeInsets.all(5) ,
@@ -105,7 +118,9 @@ class DeliveredOrderCard extends StatelessWidget {
                               ),
                               Container(
                                 child: RaisedButton.icon(
-                                  onPressed: (){ openAlertBox(context); },
+                                  onPressed: (){ Navigator.push(
+                                      context, MaterialPageRoute(builder: (context) => DetailDeliveredOrder(order.id)));
+                                  },
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
                                   label: Text('Rate',
@@ -128,6 +143,7 @@ class DeliveredOrderCard extends StatelessWidget {
               ],
             )
         )
+    ))
     );
   }
 
@@ -141,8 +157,10 @@ openAlertBox(BuildContext context) {
         return AlertDialog(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(32.0))),
-          content: Container(
-            width: 300.0,
+         content: SingleChildScrollView(
+         scrollDirection: Axis.vertical,
+         child: Container(
+            width: 400.0,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
@@ -175,6 +193,7 @@ openAlertBox(BuildContext context) {
                       color:  Color(0xFFFFC416),
                       borderColor:  Color(0xFFFFC416),
                       onRated: (r){
+                        rate = r;
                         print(r);
                       },
                     ),
@@ -186,6 +205,11 @@ openAlertBox(BuildContext context) {
                 Padding(
                   padding: EdgeInsets.all(getProportionateScreenHeight(10)),
                   child: TextFormField(
+                    controller: reviewcontroller,
+                    onSaved: (newValue) => review = newValue,
+                    onChanged: (value) {
+                      review = value;
+                    },
                     decoration: InputDecoration(
                       hintText: "Add Review",
                       border: InputBorder.none,
@@ -198,14 +222,16 @@ openAlertBox(BuildContext context) {
                 child: DefaultButton(
                   text: "Add Review",
                   press: (){
-
+                      print("rate: "+rate.toString());
+                      print("review: "+reviewcontroller.text);
+                      Navigator.pop(context);
                   },
                 )
               )
 
               ],
             ),
-          ),
+          ),)
         );
       });
 }

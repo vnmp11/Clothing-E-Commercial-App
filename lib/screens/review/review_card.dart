@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/models/Review.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 import '../../constants.dart';
 
 class ReviewCard extends StatelessWidget {
-  final String image, name, date, comment;
-  final double rating;
-  final Function onTap, onPressed;
+  final Function onTap;
   final bool isLess;
-  const ReviewCard({
+  final ReviewModel review;
+
+  ReviewCard({
      Key? key,
-    required this.name,
-    required this.image,
-    required this.date,
-    required this.comment,
-    required this.rating,
-    required this.onTap,
-    required this.isLess,
-    required this.onPressed,
+    required this.review, required this.onTap, required this.isLess,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print("image: "+review.image);
+
     return Container(
       padding: EdgeInsets.only(
         top: 2.0,
@@ -32,23 +28,25 @@ class ReviewCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 45.0,
-            width: 45.0,
-            margin: EdgeInsets.only(right: 16.0),
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/splash1.png",),
-                fit: BoxFit.cover,
-              ),
-              borderRadius: BorderRadius.circular(44.0),
+          SizedBox(
+            height: 35,
+            width: 35,
+            child: Stack(
+              fit: StackFit.expand,
+              clipBehavior: Clip.none,
+              children: [
+                ClipOval(
+                  child: review.image.isEmpty ? Image.asset("assets/images/avatar.png") : Image.network(review.image, fit: BoxFit.cover)
+                ),
+              ],
             ),
+
           ),
           Row(
             children: [
               Expanded(
                 child: Text(
-                  name,
+                  review.name,
                   style: TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
@@ -62,7 +60,7 @@ class ReviewCard extends StatelessWidget {
           Row(
             children: [
               Text(
-                date,
+                review.date,
                 style: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500),
               ),
               SizedBox(width: kFixPadding),
@@ -72,7 +70,7 @@ class ReviewCard extends StatelessWidget {
                 SmoothStarRating(
                   isReadOnly: true,
                   starCount: 5,
-                  rating: rating,
+                  rating: review.rating,
                   size: 20.0,
                   color:  Color(0xFFFFC416),
                   borderColor:  Color(0xFFFFC416),
@@ -85,14 +83,14 @@ class ReviewCard extends StatelessWidget {
             onTap: (){},
             child: isLess
                 ? Text(
-                    comment,
+              review.comment,
                     style: TextStyle(
                       fontSize: 14.0,
                       color: kSecondaryColor,
                     ),
                   )
                 : Text(
-                    comment,
+              review.comment,
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(

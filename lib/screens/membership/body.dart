@@ -73,8 +73,8 @@ class _BodyState extends State<Body>{
   User? user = FirebaseAuth.instance.currentUser;
   UserModel loggedInUser = UserModel();
   String? _downloadUrl = "http://hethongxephangtudong.net/public/client/images/no-avatar.png";
-  String? name = "hello";
-  String? email = "hello";
+  String? name = " ";
+  String? email = " ";
   double point = 0;
   double missingPoint = 0;
   double totalPoint = 3000000;
@@ -87,10 +87,12 @@ class _BodyState extends State<Body>{
     FirebaseFirestore.instance.collection("Users").doc(user!.uid)
         .get().then((value){
       this.loggedInUser = UserModel.fromMap(value.data());
+
       setState(() {
-        email = "${loggedInUser.Email}";
-        name = "${loggedInUser.Name}";
+        email = loggedInUser.Email!;
+        name = loggedInUser.Name!;
         point = loggedInUser.Point!;
+
         if (point >= 10000000){
           member = "Diamond";
           totalPoint = 100000000;

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/models/Product.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 
 import '../../../size_config.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final double rating;
+  final Product product;
 
-  CustomAppBar({required this.rating});
+  CustomAppBar({required this.product});
 
   @override
   // AppBar().preferredSize.height provide us the height that appy on our app bar
@@ -52,7 +54,7 @@ class CustomAppBar extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "$rating",
+                  NumberFormat("0.#").format(product.rating).toString(),
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,

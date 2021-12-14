@@ -300,6 +300,7 @@ class _SignUpFormState extends State<SignUpForm> {
      userModel.Address = addresslcontroller.text;
      userModel.Role = "1";
      userModel.Point =0;
+     userModel.Discount =0;
      
      await fstore.collection("Users").doc(fuser.uid).set(userModel.toMap());
      sendVerificationEmail();

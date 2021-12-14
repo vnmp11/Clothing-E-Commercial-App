@@ -22,6 +22,9 @@ import "package:intl/intl.dart";
 
 
 class BottomCard extends StatefulWidget {
+  BottomCard(String this.id, {Key? key}) : super(key: key);
+  String id;
+
   @override
   _BottomCardState createState() => _BottomCardState();
 }
@@ -34,8 +37,21 @@ class _BottomCardState extends State<BottomCard> {
   User? user = FirebaseAuth.instance.currentUser;
   UserModel loggedInUser = UserModel();
 
+
   @override
   Widget build(BuildContext context) {
+
+    final ordProvider = Provider.of<OrderProvider>(context);
+    Order orderUser = new Order();
+    User? user = FirebaseAuth.instance.currentUser;
+
+    //get subtotal, total of the order
+    for (int i = 0;i < ordProvider.orders.length ; i++){
+      if((ordProvider.orders[i].id == widget.id)){
+        orderUser = ordProvider.orders[i];
+      }
+    }
+
     return Container(
       padding: EdgeInsets.symmetric(
         vertical: getProportionateScreenWidth(15),
@@ -66,13 +82,29 @@ class _BottomCardState extends State<BottomCard> {
               children: [
                 Text(
                   "Sub total: ",
-                  style: TextStyle(fontSize: 14, color: kSecondaryColor, fontWeight:  FontWeight.w500),
+                  style: TextStyle(fontSize: 16, color: kSecondaryColor, fontWeight:  FontWeight.w500),
                 ),
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    NumberFormat.simpleCurrency(locale: 'vi').format(totalPrice).toString(),
-                    style: TextStyle(fontSize: 14, color: kPrimaryColor, fontWeight:  FontWeight.w600),
+                    NumberFormat.simpleCurrency(locale: 'vi').format(orderUser.subTotal).toString(),
+                    style: TextStyle(fontSize: 16, color: kPrimaryColor, fontWeight:  FontWeight.w600),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Discount: ",
+                  style: TextStyle(fontSize: 16, color: kSecondaryColor, fontWeight:  FontWeight.w500),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    (orderUser.discount*100).toString() + " %",
+                    style: TextStyle(fontSize: 16, color: kPrimaryColor, fontWeight:  FontWeight.w600),
                   ),
                 )
               ],
@@ -87,7 +119,7 @@ class _BottomCardState extends State<BottomCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                    NumberFormat.simpleCurrency(locale: 'vi').format(shipFee).toString(),
+                    NumberFormat.simpleCurrency(locale: 'vi').format(orderUser.feeShip).toString(),
                     style: TextStyle(fontSize: 16, color: kPrimaryColor, fontWeight:  FontWeight.w600),
                   ),
                 )
@@ -105,8 +137,8 @@ class _BottomCardState extends State<BottomCard> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Text(
-                      NumberFormat.simpleCurrency(locale: 'vi').format(totalPrice + shipFee).toString(),
-                    style: TextStyle(fontSize: 20, color: kPrimaryColor, fontWeight:  FontWeight.w700),
+                      NumberFormat.simpleCurrency(locale: 'vi').format(orderUser.totalPrice).toString(),
+                    style: TextStyle(fontSize: 20, color: kPrimaryColor, fontWeight:  FontWeight.w800),
                   ),
                 )
               ],

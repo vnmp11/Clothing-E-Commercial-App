@@ -23,6 +23,7 @@ class Body extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
+          SizedBox(height: 50),
           ProfilePic(),
           SizedBox(height: 20),
           ProfileMenu(

@@ -10,6 +10,8 @@ import 'package:shop_app/provider/favorite_provider.dart';
 import 'package:shop_app/provider/order_provider.dart';
 import 'package:shop_app/provider/product_provider.dart';
 import 'package:shop_app/provider/related_product_provider.dart';
+import 'package:shop_app/provider/review_provider.dart';
+import 'package:shop_app/provider/user_provider.dart';
 
 import 'package:shop_app/routes.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
@@ -32,7 +34,8 @@ Future<void> main() async {
     ChangeNotifierProvider.value(value: FavoriteProvider.initialize()),
     ChangeNotifierProvider.value(value: RelatedProductProvider.initialize()),
     ChangeNotifierProvider.value(value: OrderProvider.initialize()),
-
+    ChangeNotifierProvider.value(value: UserProvider.initialize()),
+    ChangeNotifierProvider.value(value: ReviewProvider.initialize()),
   ],
     child: MaterialApp(
       debugShowCheckedModeBanner: false,

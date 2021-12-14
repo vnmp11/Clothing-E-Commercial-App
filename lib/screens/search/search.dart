@@ -50,9 +50,6 @@ class _SearchScreenState extends State<SearchScreen> {
       });
     }
 
-    print("temp: "+tempSearchStore.length.toString());
-    print("quety: "+queryResultSet.length.toString());
-
   }
 
   @override

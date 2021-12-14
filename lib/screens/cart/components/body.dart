@@ -24,7 +24,6 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     var cartProvider = Provider.of<CartProvider>(context);
 
-    print (cartProvider.carts.length);
     List<Cart> cartUser=[];
     User? user = FirebaseAuth.instance.currentUser;
 
@@ -35,7 +34,6 @@ class _BodyState extends State<Body> {
       }
     }
 
-    print (cartProvider.carts.length);
     return Padding(
       padding:
           EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
@@ -48,7 +46,6 @@ class _BodyState extends State<Body> {
             direction: DismissDirection.endToStart,
             onDismissed: (direction) {
               setState(()  {
-                print("id:" + cartUser[index].cartID);
                 FirebaseFirestore.instance.collection('Cart').doc(cartUser[index].cartID).delete();
 
                 cartProvider.carts.remove(cartUser[index]);

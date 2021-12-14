@@ -90,6 +90,9 @@ class _FavoriteCardState extends State<FavoriteCard>{
               maxLines: 2,
             ),
             SizedBox(height: 5),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
             Text.rich(
               TextSpan(
                 text: NumberFormat.simpleCurrency(locale: 'vi').format(widget.product.price).toString(),
@@ -97,6 +100,19 @@ class _FavoriteCardState extends State<FavoriteCard>{
                     fontWeight: FontWeight.w600, color: kPrimaryColor),
               ),
             ),
+                SizedBox(width: 15),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    NumberFormat("0.#").format( widget.product.rating).toString(),
+                    style: const TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(width: 3),
+                  SvgPicture.asset("assets/icons/Star Icon.svg"),]),]),
             Align(alignment: Alignment.centerRight,
             child:
             InkWell(

@@ -21,7 +21,7 @@ class DeliveringOrderTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ordProvider = Provider.of<OrderProvider>(context);
+    var ordProvider = Provider.of<OrderProvider>(context);
     List<Order> orderUser=[];
     User? user = FirebaseAuth.instance.currentUser;
 

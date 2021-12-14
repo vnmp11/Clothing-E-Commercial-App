@@ -96,13 +96,32 @@ class _ProductCardState extends State<ProductCard>{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-              NumberFormat.simpleCurrency(locale: 'vi').format(widget.product.price).toString(),
+                    NumberFormat.simpleCurrency(locale: 'vi').format(widget.product.price).toString(),
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(14),
                       fontWeight: FontWeight.w400,
                       color: kPrimaryColor,
                     ),
                   ),
+
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                  Text(
+                    NumberFormat("0.#").format( widget.product.rating).toString(),
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(width: 5),
+                  SvgPicture.asset("assets/icons/Star Icon.svg"),]),
+
                   InkWell(
                     borderRadius: BorderRadius.circular(50),
                     onTap: () {
@@ -125,9 +144,9 @@ class _ProductCardState extends State<ProductCard>{
 
                     },
                     child: Container(
-                      padding: EdgeInsets.all(getProportionateScreenWidth(8)),
-                      height: getProportionateScreenWidth(28),
-                      width: getProportionateScreenWidth(28),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(5)),
+                      height: getProportionateScreenWidth(25),
+                      width: getProportionateScreenWidth(25),
                       decoration: BoxDecoration(
                         color: _backFav,
                         shape: BoxShape.circle,

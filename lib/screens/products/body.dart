@@ -22,10 +22,10 @@ class Body extends StatelessWidget {
 
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(left: getProportionateScreenWidth(5), right: getProportionateScreenWidth(10)),
+        padding: EdgeInsets.only(left: getProportionateScreenWidth(5), right: getProportionateScreenWidth(10), bottom: getProportionateScreenWidth(5)),
         child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 200,
+                maxCrossAxisExtent: 220,
                 childAspectRatio: 0.7,
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 10),

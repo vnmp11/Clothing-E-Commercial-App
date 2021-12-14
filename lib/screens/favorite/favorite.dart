@@ -15,6 +15,7 @@ class FavoriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          automaticallyImplyLeading: false,
           iconTheme: new IconThemeData(
               color: kPrimaryColor),
         title: Text("My Favorite",

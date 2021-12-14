@@ -8,13 +8,16 @@ class Order {
   double totalPrice = 0;
   double subTotal = 0;
   double feeShip  = 0;
+  double discount = 0;
   int totalItem = 0;
   String date = " ";
   int status = 1;
 
-  Order(String id, double price, int items, String date,double subTotal,double ship ){
+  Order(){
 
   }
+
+
 
   Order.fromSnapshot(DocumentSnapshot snapshot){
 
@@ -22,11 +25,14 @@ class Order {
     uId = snapshot.get("uID");
     totalItem = int.parse(snapshot.get("totalItem").toString());
     totalPrice = double.parse(snapshot.get("totalPrice").toString());
+    discount = double.parse(snapshot.get("discount").toString());
     subTotal = double.parse(snapshot.get("subTotal").toString());
     feeShip = double.parse(snapshot.get("feeShip").toString());
     date = formatTimestamp(snapshot.get("date"));
     status = snapshot.get("status");
   }
+
+
 }
 
 String formatTimestamp(Timestamp timestamp) {

@@ -1,5 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/models/Order.dart';
+import 'package:shop_app/provider/order_provider.dart';
 import 'package:shop_app/screens/favorite/favorite.dart';
 import 'package:shop_app/screens/membership/membership.dart';
 import 'package:shop_app/screens/order/components/delevering_order_tab.dart';
@@ -11,6 +15,25 @@ class MyOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ordProvider = Provider.of<OrderProvider>(context);
+    User? user = FirebaseAuth.instance.currentUser;
+
+    List<Order> orderDelivering=[];
+    List<Order> orderDelivered=[];
+
+
+    for (int i = 0;i < ordProvider.orders.length ; i++){
+      if((ordProvider.orders[i].uId == user!.uid)&&(ordProvider.orders[i].status == 0)){
+        orderDelivered.add(ordProvider.orders[i]);
+      }
+    }
+
+    for (int i = 0;i < ordProvider.orders.length ; i++){
+      if((ordProvider.orders[i].uId == user!.uid)&&(ordProvider.orders[i].status == 1)){
+        orderDelivering.add(ordProvider.orders[i]);
+      }
+    }
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -25,8 +48,24 @@ class MyOrder extends StatelessWidget {
             indicatorColor: kPrimaryColor,
             unselectedLabelColor: kSecondaryColor,
             tabs: [
-              Tab(icon: Text('Delivering', style: TextStyle(color: kPrimaryColor),)),
-              Tab(icon: Text('Delivered', style: TextStyle(color: kPrimaryColor),)),
+              Tab(icon: RichText(
+                text: TextSpan(
+                  text: 'Delivering ',
+                  style:  TextStyle(color: kPrimaryColor, fontWeight: FontWeight.w600),
+                  children: <TextSpan>[
+                    TextSpan(text:orderDelivering.length == 0 ? " " : "${orderDelivering.length}" ,style: TextStyle(fontSize: 12, color: kSecondaryColor )),
+                  ],
+                ),
+              )),
+              Tab(icon: RichText(
+                text: TextSpan(
+                  text: 'Delivered ',
+                  style:  TextStyle(color: kPrimaryColor, fontWeight: FontWeight.w600),
+                  children: <TextSpan>[
+                    TextSpan(text: orderDelivered.length == 0 ? " " : "${orderDelivered.length}" ,style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+              )),
             ],
           ),
         ),
@@ -40,3 +79,4 @@ class MyOrder extends StatelessWidget {
     );
   }
 }
+

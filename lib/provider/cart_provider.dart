@@ -12,11 +12,6 @@ class CartProvider with ChangeNotifier{
   CartProvider.initialize(){
     _loadCart();
 
-
-    addNewCart(Cart cart) async{
-      carts.add(cart);
-      notifyListeners();
-    }
   }
   _loadCart() async{
     carts = await _cartHelper.getCart();
