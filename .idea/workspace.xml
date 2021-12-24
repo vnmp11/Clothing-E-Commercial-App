@@ -8,26 +8,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="basic_backend">
-      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/add_review.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/full_image.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/product_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/helper/ReviewHelper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helper/ReviewHelper.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Review.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Review.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/detail_order/components/body2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/body2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details_product/components/custom_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details_product/components/custom_app_bar.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details_product/components/product_description.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details_product/components/product_description.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/review/review_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/review/review_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/sign_up/components/sign_up_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/sign_up/components/sign_up_form.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="basic_backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639286019194</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added image review part">
+      <created>1640347391504</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640347391504</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +155,8 @@
     <MESSAGE value="add function SignUp/SignIn/EditProfile" />
     <MESSAGE value="basic_backend" />
     <MESSAGE value="fix bugs and solve some functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and solve some functions" />
+    <MESSAGE value="added image review part" />
+    <option name="LAST_COMMIT_MESSAGE" value="added image review part" />
   </component>
   <component name="WindowStateProjectService">
     <state x="281" y="28" key="#Plugins" timestamp="1639047927358">
@@ -215,26 +204,26 @@
     </state>
     <state x="436" y="125" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1636737572241" />
     <state x="469" y="142" key="FileChooserDialogImpl/0.0.1376.774@0.0.1376.774" timestamp="1639470019118" />
-    <state width="1375" height="209" key="GridCell.Tab.0.bottom" timestamp="1640342984699">
+    <state width="1375" height="209" key="GridCell.Tab.0.bottom" timestamp="1640347350301">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
-    <state width="1375" height="209" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
-    <state width="1375" height="209" key="GridCell.Tab.0.center" timestamp="1640342984699">
+    <state width="1375" height="209" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1640347350301" />
+    <state width="1375" height="209" key="GridCell.Tab.0.center" timestamp="1640347350301">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1638118607955" />
-    <state width="1375" height="209" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
-    <state width="1375" height="209" key="GridCell.Tab.0.left" timestamp="1640342984699">
+    <state width="1375" height="209" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1640347350301" />
+    <state width="1375" height="209" key="GridCell.Tab.0.left" timestamp="1640347350301">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1638118607954" />
-    <state width="1375" height="209" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
-    <state width="1375" height="209" key="GridCell.Tab.0.right" timestamp="1640342984699">
+    <state width="1375" height="209" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1640347350301" />
+    <state width="1375" height="209" key="GridCell.Tab.0.right" timestamp="1640347350301">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
-    <state width="1375" height="209" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
+    <state width="1375" height="209" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1640347350301" />
     <state width="1375" height="245" key="GridCell.Tab.1.bottom" timestamp="1639132374587">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
@@ -259,11 +248,11 @@
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="197" y="0" key="SettingsEditor/0.0.1376.774@0.0.1376.774" timestamp="1639131042886" />
-    <state x="281" y="120" key="Vcs.Push.Dialog.v2" timestamp="1639286023128">
+    <state x="281" y="120" key="Vcs.Push.Dialog.v2" timestamp="1640347395088">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="261" y="105" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1638158464188" />
-    <state x="281" y="120" key="Vcs.Push.Dialog.v2/0.0.1376.774@0.0.1376.774" timestamp="1639286023128" />
+    <state x="281" y="120" key="Vcs.Push.Dialog.v2/0.0.1376.774@0.0.1376.774" timestamp="1640347395088" />
     <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632980452004">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
