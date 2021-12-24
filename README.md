@@ -3,6 +3,13 @@
 **Packages we are using:**
 
 - flutter_svg: [link](https://pub.dev/packages/flutter_svg)
+- cloud_firestore: ^2.5.1
+- firebase_auth: ^3.1.1
+- firebase_core: ^1.6.0
+- fluttertoast: ^8.0.8
+- rflutter_alert: ^2.0.4
+- shared_preferences: ^2.0.8
+- image_picker: ^0.8.4+2
 
 ## Screens it contains:
 
