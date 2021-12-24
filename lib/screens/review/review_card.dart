@@ -16,7 +16,6 @@ class ReviewCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("image: "+review.image);
 
     return Container(
       padding: EdgeInsets.only(
@@ -78,7 +77,8 @@ class ReviewCard extends StatelessWidget {
 
             ],
           ),
-          SizedBox(height: 8.0),
+          SizedBox(height: 5.0),
+
           GestureDetector(
             onTap: (){},
             child: isLess
@@ -99,6 +99,18 @@ class ReviewCard extends StatelessWidget {
                     ),
                   ),
           ),
+          review.photo.length == 0 ? SizedBox(height: 1.0 ) : Padding(
+            padding: const EdgeInsets.only(top: 5.0),
+            child: GridView.builder(
+              itemCount: review.photo.length,
+              shrinkWrap: true,
+              gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 6),
+              itemBuilder: (BuildContext context, int index) {
+                return Image.network(review.photo[index],
+                  fit: BoxFit.cover,);
+              },),),
         ],
       ),
     );

@@ -43,6 +43,7 @@ class _ProductDescriptionState extends State<ProductDescription>{
   Color _backFav = Color(0xFFF5F6F9);
   bool isMore = false;
 
+
   @override
   void initState(){
     super.initState();

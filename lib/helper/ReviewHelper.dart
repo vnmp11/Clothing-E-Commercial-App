@@ -9,8 +9,8 @@ class ReviewHelper {
   Future<List<ReviewModel>> getReview() async =>
       firestore.collection(collection).get().then((result) {
         List <ReviewModel> reviews= [];
-        for(DocumentSnapshot cart in result.docs){
-          reviews.add(ReviewModel.fromSnapshot(cart));
+        for(DocumentSnapshot review in result.docs){
+          reviews.add(ReviewModel.fromSnapshot(review));
         }
         return reviews;
       });

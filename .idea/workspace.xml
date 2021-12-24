@@ -9,40 +9,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ad4b99f-f02d-4ed9-812d-4e053220593c" name="Default Changelist" comment="basic_backend">
-      <change afterPath="$PROJECT_DIR$/lib/helper/ReviewHelper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/helper/UserHelper.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/provider/review_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/provider/user_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/body2.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/detail_delivered_order.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/add_review.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/full_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/favorite_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/favorite_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/components/product_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/product_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Order.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Order.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/helper/ReviewHelper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/helper/ReviewHelper.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/models/Review.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Review.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/User.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/provider/cart_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/provider/cart_provider.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cart/components/check_out_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/detail_order/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/detail_order/components/bottom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/bottom.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/detail_order/detail_order.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/detail_order/detail_order.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/detail_order/components/body2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/detail_order/components/body2.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/details_product/components/custom_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details_product/components/custom_app_bar.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/details_product/components/product_description.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details_product/components/product_description.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/details_product/details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/details_product/details_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/favorite/favorite.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/favorite/favorite.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/membership/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/membership/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/order/components/delevering_order_tab.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/order/components/delevering_order_tab.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/order/components/delivered_order_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/order/components/delivered_order_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/order/order.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/order/order.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/products/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/products/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile/components/body.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/profile/profile_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/profile/profile_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/review/Reviews.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/review/Reviews.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/review/review_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/review/review_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/search/search.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/search/search.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/sign_up/components/sign_up_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/sign_up/components/sign_up_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +57,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flutter_ecommerce_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -81,19 +65,19 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\detail_order" />
-      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\detail_order\components" />
-      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\assets\images" />
-      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\order\components" />
-      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\detail_order\components" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\payment" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\components" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\cart\components" />
       <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Clothing-E-Commercial-App\lib\screens\detail_order\components" />
+      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\detail_order" />
+      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\detail_order\components" />
+      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\assets\images" />
+      <recent name="D:\JUNIOR_1st Term\Clothing-E-Commercial-App\lib\screens\order\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -231,26 +215,26 @@
     </state>
     <state x="436" y="125" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1636737572241" />
     <state x="469" y="142" key="FileChooserDialogImpl/0.0.1376.774@0.0.1376.774" timestamp="1639470019118" />
-    <state width="1375" height="202" key="GridCell.Tab.0.bottom" timestamp="1639484680136">
+    <state width="1375" height="209" key="GridCell.Tab.0.bottom" timestamp="1640342984699">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
-    <state width="1375" height="202" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1639484680136" />
-    <state width="1375" height="202" key="GridCell.Tab.0.center" timestamp="1639484680136">
+    <state width="1375" height="209" key="GridCell.Tab.0.bottom/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
+    <state width="1375" height="209" key="GridCell.Tab.0.center" timestamp="1640342984699">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1638118607955" />
-    <state width="1375" height="202" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1639484680136" />
-    <state width="1375" height="202" key="GridCell.Tab.0.left" timestamp="1639484680136">
+    <state width="1375" height="209" key="GridCell.Tab.0.center/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
+    <state width="1375" height="209" key="GridCell.Tab.0.left" timestamp="1640342984699">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1638118607954" />
-    <state width="1375" height="202" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1639484680136" />
-    <state width="1375" height="202" key="GridCell.Tab.0.right" timestamp="1639484680136">
+    <state width="1375" height="209" key="GridCell.Tab.0.left/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
+    <state width="1375" height="209" key="GridCell.Tab.0.right" timestamp="1640342984699">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state width="1237" height="137" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1638118607956" />
-    <state width="1375" height="202" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1639484680136" />
+    <state width="1375" height="209" key="GridCell.Tab.0.right/0.0.1376.774@0.0.1376.774" timestamp="1640342984699" />
     <state width="1375" height="245" key="GridCell.Tab.1.bottom" timestamp="1639132374587">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
@@ -284,10 +268,10 @@
       <screen x="0" y="0" width="1376" height="774" />
     </state>
     <state x="509" y="301" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1376.774@0.0.1376.774" timestamp="1632980452004" />
-    <state x="0" y="0" width="575" height="774" key="find.popup" timestamp="1639294616449">
+    <state x="0" y="0" width="575" height="774" key="find.popup" timestamp="1640322231332">
       <screen x="0" y="0" width="1376" height="774" />
     </state>
-    <state x="0" y="0" width="575" height="774" key="find.popup/0.0.1376.774@0.0.1376.774" timestamp="1639294616449" />
+    <state x="0" y="0" width="575" height="774" key="find.popup/0.0.1376.774@0.0.1376.774" timestamp="1640322231332" />
     <state x="302" y="24" key="new project wizard" timestamp="1637989801528">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

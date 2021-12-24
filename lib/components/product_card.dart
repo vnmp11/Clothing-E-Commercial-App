@@ -6,7 +6,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:shop_app/models/Favorite.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/Review.dart';
 import 'package:shop_app/provider/favorite_provider.dart';
+import 'package:shop_app/provider/review_provider.dart';
 import 'package:shop_app/screens/details_product/details_screen.dart';
 
 import '../constants.dart';
@@ -57,6 +59,23 @@ class _ProductCardState extends State<ProductCard>{
   @override
   Widget build(BuildContext context) {
     final favProvider = Provider.of<FavoriteProvider>(context);
+    final reviewProvider = Provider.of<ReviewProvider>(context);
+
+    List<ReviewModel> reviewPro = [];
+    double totalRate = 0;
+
+
+    //get list review
+    for (int i = 0;i < reviewProvider.reviews.length ; i++){
+      if (reviewProvider.reviews[i].idPro == widget.product.id){
+        reviewPro.add(reviewProvider.reviews[i]);
+      }
+    }
+
+    //get rating
+    for (int i = 0; i< reviewPro.length; i++) {
+      totalRate += reviewPro[i].rating;
+    }
 
     return Padding(
       padding: EdgeInsets.only(left: getProportionateScreenWidth(20), right: getProportionateScreenWidth(5), bottom: getProportionateScreenWidth(5)),
@@ -113,7 +132,7 @@ class _ProductCardState extends State<ProductCard>{
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                   Text(
-                    NumberFormat("0.#").format( widget.product.rating).toString(),
+                    totalRate == 0 ? "5.0" : NumberFormat("0.#").format(totalRate/reviewPro.length).toString(),
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,

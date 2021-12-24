@@ -17,6 +17,7 @@ import 'package:shop_app/provider/review_provider.dart';
 import 'package:shop_app/screens/cart/cart_screen.dart';
 import 'package:shop_app/screens/cart/components/cart_card.dart';
 import 'package:shop_app/screens/cart/components/check_out_card.dart';
+import 'package:shop_app/screens/detail_order/components/add_review.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -90,7 +91,12 @@ class _DeliveredBodyState extends State<DeliveredBody> {
             Padding(
                 padding: EdgeInsets.symmetric(vertical: 10),
                 child: GestureDetector(onTap: () =>
-                    openAlertBox(context, lcart[index]['proID'], name!),
+                    Navigator.pushReplacement<void, void>(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (BuildContext context) => AddReviewScreen(id: lcart[index]['proID'], name: name!),
+                      ),
+                    ),
                   child: Row(
                     children: [
                       SizedBox(
@@ -146,9 +152,15 @@ class _DeliveredBodyState extends State<DeliveredBody> {
                                             .bodyText1),
                                     IconButton(
                                       onPressed: () {
-                                        openAlertBox(
-                                            context, lcart[index]['proID'],
-                                            name!);
+                                        // openAlertBox(
+                                        //     context, lcart[index]['proID'],
+                                        //     name!);
+                                        Navigator.pushReplacement<void, void>(
+                                          context,
+                                          MaterialPageRoute<void>(
+                                            builder: (BuildContext context) => AddReviewScreen(id: lcart[index]['proID'], name: name!),
+                                          ),
+                                        );
                                       },
                                       icon: Icon(
                                         Icons.rate_review_outlined,
@@ -195,116 +207,118 @@ class _DeliveredBodyState extends State<DeliveredBody> {
   }
 
 
-  openAlertBox(BuildContext context, String id, String name) {
-    return showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return new AlertDialog(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(32.0))),
-              content: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Container(
-                  width: 400.0,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Padding(
-                            padding:
-                            EdgeInsets.only(right: getProportionateScreenWidth(
-                                50)),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Rate",
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Color.fromARGB(255, 79, 119, 45),
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                ]
-                            ),
-                          ),
-                          SmoothStarRating(
-                            allowHalfRating: false,
-                            starCount: 5,
-                            rating: 1,
-                            size: 30.0,
-                            color: Color(0xFFFFC416),
-                            borderColor: Color(0xFFFFC416),
-                            onRated: (r) {
-                              rate = r;
-                            },
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5.0,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(
-                            getProportionateScreenHeight(10)),
-                        child: TextFormField(
-                          controller: reviewcontroller,
-                          onSaved: (newValue) => review = newValue,
-                          onChanged: (value) {
-                            review = value;
-                          },
-                          decoration: InputDecoration(
-                            hintText: "Say something about the product",
-                            border: InputBorder.none,
-                          ),
-                          maxLines: 8,
-                        ),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.all(
-                              getProportionateScreenHeight(10)),
-                          child: DefaultButton(
-                            text: "Add Review",
-                            press: () {
-                              ReviewModel newReview = new ReviewModel();
-                              newReview.idPro = id;
-                              newReview.name = name;
-                              newReview.rating = rate!;
-                              newReview.date = DateFormat('dd/MM/yyyy hh:mm')
-                                  .format(DateTime.now());
-                              newReview.image = _downloadUrl!;
-                              newReview.comment = review!;
-
-                              DocumentReference ref1 = FirebaseFirestore
-                                  .instance.collection("Review").doc();
-                              ref1.set({
-                                'image': _downloadUrl,
-                                'idPro': id,
-                                'name': name,
-                                'rating': rate,
-                                'date': DateTime.now(),
-                                'comment': review,
-
-                              });
-
-                              reviewProvider.reviews.add(newReview);
-                              updateRating(id);
-
-                              reviewcontroller.clear();
-                              Navigator.pop(context);
-                            },
-                          )
-                      )
-
-                    ],
-                  ),
-                ),)
-          );
-        });
-  }
+  // openAlertBox(BuildContext context, String id, String name) {
+  //   return showDialog(
+  //       context: context,
+  //       builder: (BuildContext context) {
+  //         return new AlertDialog(
+  //             shape: RoundedRectangleBorder(
+  //                 borderRadius: BorderRadius.all(Radius.circular(32.0))),
+  //             content: SingleChildScrollView(
+  //               scrollDirection: Axis.vertical,
+  //               child: Container(
+  //                 width: 400.0,
+  //                 child: Column(
+  //                   mainAxisAlignment: MainAxisAlignment.start,
+  //                   mainAxisSize: MainAxisSize.min,
+  //                   children: <Widget>[
+  //                     Row(
+  //                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //                       mainAxisSize: MainAxisSize.min,
+  //                       children: <Widget>[
+  //                         Padding(
+  //                           padding:
+  //                           EdgeInsets.only(right: getProportionateScreenWidth(
+  //                               50)),
+  //                           child: Row(
+  //                               mainAxisAlignment: MainAxisAlignment.start,
+  //                               children: [
+  //                                 Text(
+  //                                   "Rate",
+  //                                   style: TextStyle(
+  //                                     fontSize: 20,
+  //                                     color: Color.fromARGB(255, 79, 119, 45),
+  //                                     fontWeight: FontWeight.w600,
+  //                                   ),
+  //                                 ),
+  //                               ]
+  //                           ),
+  //                         ),
+  //                         SmoothStarRating(
+  //                           allowHalfRating: false,
+  //                           starCount: 5,
+  //                           rating: 1,
+  //                           size: 30.0,
+  //                           color: Color(0xFFFFC416),
+  //                           borderColor: Color(0xFFFFC416),
+  //                           onRated: (r) {
+  //                             rate = r;
+  //                           },
+  //                         ),
+  //                       ],
+  //                     ),
+  //                     SizedBox(
+  //                       height: 5.0,
+  //                     ),
+  //                     Padding(
+  //                       padding: EdgeInsets.all(
+  //                           getProportionateScreenHeight(10)),
+  //                       child: TextFormField(
+  //                         controller: reviewcontroller,
+  //                         onSaved: (newValue) => review = newValue,
+  //                         onChanged: (value) {
+  //                           review = value;
+  //                         },
+  //                         decoration: InputDecoration(
+  //                           hintText: "Say something about the product",
+  //                           border: InputBorder.none,
+  //                         ),
+  //                         maxLines: 8,
+  //                       ),
+  //                     ),
+  //                     Padding(
+  //                         padding: EdgeInsets.all(
+  //                             getProportionateScreenHeight(10)),
+  //                         child: DefaultButton(
+  //                           text: "Add Review",
+  //                           press: () {
+  //                             ReviewModel newReview = new ReviewModel();
+  //                             newReview.idPro = id;
+  //                             newReview.name = name;
+  //                             newReview.rating = rate!;
+  //                             newReview.date = DateFormat('dd/MM/yyyy hh:mm')
+  //                                 .format(DateTime.now());
+  //                             newReview.image = _downloadUrl!;
+  //                             newReview.photo = _downloadUrl!;
+  //                             newReview.comment = review!;
+  //
+  //                             DocumentReference ref1 = FirebaseFirestore
+  //                                 .instance.collection("Review").doc();
+  //                             ref1.set({
+  //                               'image': _downloadUrl,
+  //                               'idPro': id,
+  //                               'name': name,
+  //                               'rating': rate,
+  //                               'date': DateTime.now(),
+  //                               'comment': review,
+  //                               'photo': _downloadUrl,
+  //
+  //                             });
+  //
+  //                             reviewProvider.reviews.add(newReview);
+  //                             updateRating(id);
+  //                             print("hihi:"+newReview.toString());
+  //                             reviewcontroller.clear();
+  //                             Navigator.pop(context);
+  //                           },
+  //                         )
+  //                     )
+  //
+  //                   ],
+  //                 ),
+  //               ),)
+  //         );
+  //       });
+  // }
 
 }

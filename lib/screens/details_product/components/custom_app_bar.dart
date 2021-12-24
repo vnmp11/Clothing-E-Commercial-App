@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/models/Product.dart';
+import 'package:shop_app/models/Review.dart';
+import 'package:shop_app/provider/review_provider.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 
 import '../../../size_config.dart';
 
 class CustomAppBar extends StatelessWidget {
   final Product product;
+  double totalRate = 0;
 
   CustomAppBar({required this.product});
 
@@ -18,6 +22,22 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final reviewProvider = Provider.of<ReviewProvider>(context);
+
+    List<ReviewModel> reviewPro = [];
+
+    //get list review
+    for (int i = 0;i < reviewProvider.reviews.length ; i++){
+      if (reviewProvider.reviews[i].idPro == product.id){
+        reviewPro.add(reviewProvider.reviews[i]);
+      }
+    }
+
+    //get rating
+    for (int i = 0; i< reviewPro.length; i++) {
+      totalRate += reviewPro[i].rating;
+    }
+
     return SafeArea(
       child: Padding(
         padding:
@@ -54,7 +74,7 @@ class CustomAppBar extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                  NumberFormat("0.#").format(product.rating).toString(),
+                    totalRate == 0 ? "5.0" : NumberFormat("0.#").format(totalRate/reviewPro.length).toString(),
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,

@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 
 class ReviewModel {
   String image = " ";
+  List<String> photo = [];
   String idPro = " ";
   String name = " ";
   double rating = 0;
@@ -14,6 +15,9 @@ class ReviewModel {
 
   ReviewModel.fromSnapshot(DocumentSnapshot snapshot) {
     image = snapshot.get('image');
+    for(int i=0; i< snapshot.get("photo").length; i++){
+        photo.add(snapshot.get("photo")[i]);
+    }
     idPro = snapshot.get('idPro');
     name = snapshot.get('name');
     rating = double.parse(snapshot.get("rating").toString());
@@ -24,6 +28,7 @@ class ReviewModel {
   Map<String, dynamic> toMap() {
     return {
       'image': this.image,
+      'photo': this.photo,
       'idPro': this.idPro,
       'name': this.name,
       'rating': this.rating,
