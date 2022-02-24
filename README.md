@@ -1,4 +1,4 @@
-# Clothing E-Commercial App - Flutter
+# NewLook - Flutter
 
 **Packages we are using:**
 
@@ -14,19 +14,22 @@
 ## Screens it contains:
 
 => Onboarding
-
 => Login
-
 => Forgot Password
-
 => Sign Up
-
 => Home Page
-
 => Product Details
+=> Detail Order
+=> Detail Product
+=> Review Order
+=> Membership
+=> Payment
+=> Profile
+=> Bottom Navigation Bar
 
-=> Order
-
-=> Profile (added)
-
-=> Bottom Navigation Bar (added)
+## Device Requirement:
+Android:
+  - Android studio: 4.2.1
+  - Gradle: 4.1
+  - Min SDK: 20
+  - Target SDK: 30
