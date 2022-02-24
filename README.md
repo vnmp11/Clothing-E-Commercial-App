@@ -47,5 +47,5 @@
 Android:
   - Android studio: 4.2.1
   - Gradle: 4.1
-  - Min SDK: 20
+  - Min SDK: 19
   - Target SDK: 30
