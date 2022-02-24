@@ -14,17 +14,30 @@
 ## Screens it contains:
 
 => Onboarding
+
 => Login
+
 => Forgot Password
+
 => Sign Up
+
 => Home Page
+
 => Product Details
+
 => Detail Order
+
 => Detail Product
+
 => Review Order
+
 => Membership
+
 => Payment
+
 => Profile
+![image](https://user-images.githubusercontent.com/64945534/155439654-e34beaa0-2264-49a5-b898-7acd92242afc.png)
+
 => Bottom Navigation Bar
 
 ## Device Requirement:
