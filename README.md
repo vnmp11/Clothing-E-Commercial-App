@@ -11,6 +11,11 @@
 - shared_preferences: ^2.0.8
 - image_picker: ^0.8.4+2
 
+## Technology:
+  - Language : Java
+  - FrameWork : Android
+  - Database: Firebase Authentication, Firebase Realtime Database và Firebase Storage
+
 ## Screens it contains:
 
 => Onboarding
@@ -36,7 +41,6 @@
 => Payment
 
 => Profile
-![image](https://user-images.githubusercontent.com/64945534/155439654-e34beaa0-2264-49a5-b898-7acd92242afc.png)
 
 => Bottom Navigation Bar
 
