@@ -12,10 +12,16 @@
   - image_picker: ^0.8.4+2
 
 ## Technology:
-  - Language : Java
-  - FrameWork : Android
+  - Language : Dart
+  - FrameWork : Flutter
   - Database: Firebase Authentication, Firebase Realtime Database và Firebase Storage
+  
+## 💻 Installation
 
+1. Clone the repo
+   ```sh
+   git clone https://github.com/vnmp11/Clothing-E-Commercial-App
+   ```
 ## Screens it contains:
 - Onboarding
 
